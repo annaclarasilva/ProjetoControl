@@ -21,31 +21,25 @@ namespace AppProjetoControl
             {
                 if (of.ShowDialog() == DialogResult.OK)
                 {
-
                     FileStream fs = File.Open(of.FileName, FileMode.Open, FileAccess.Read);
                     IExcelDataReader reader;
                     if (of.FilterIndex == 1)
                         reader = ExcelReaderFactory.CreateBinaryReader(fs);
                     else
                         reader = ExcelReaderFactory.CreateOpenXmlReader(fs);
-
                     result = reader.AsDataSet(new ExcelDataSetConfiguration()
                     {
                         ConfigureDataTable = (tableReader) => new ExcelDataTableConfiguration()
                         {
                             UseHeaderRow = true  // set to true to use excel first row as column in datagridview
                         }
-
                     });
-
                     cbbPlanilha.Items.Clear();
                     foreach (DataTable dt in result.Tables)
                     {
                         cbbPlanilha.Items.Add(dt.TableName);
-
                     }
                     reader.Close();
-
                 }
             }
         }
@@ -57,8 +51,6 @@ namespace AppProjetoControl
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-
-
             //string[] aba = GetExcelSheetNames();
             //string abas = aba[0] + "$";
             //string caminho = textBox1.Text;
@@ -87,8 +79,17 @@ namespace AppProjetoControl
             //}
         }
 
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmMenuAdm menuAdm = new frmMenuAdm();
+            this.Hide();
+            menuAdm.Show();
+        }
 
         //string[] aba = GetExcelSheetNames();
         //string abas = aba[0] + "$";
@@ -116,6 +117,5 @@ namespace AppProjetoControl
         //        }
         //    }
         //}
-
     }
 }
