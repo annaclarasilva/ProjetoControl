@@ -73,7 +73,7 @@
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFechar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnFechar.Location = new System.Drawing.Point(904, 0);
+            this.btnFechar.Location = new System.Drawing.Point(901, 0);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(29, 28);
             this.btnFechar.TabIndex = 258;
