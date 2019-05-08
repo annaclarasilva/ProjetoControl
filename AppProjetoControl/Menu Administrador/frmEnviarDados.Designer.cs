@@ -34,10 +34,11 @@
             this.btnFechar = new System.Windows.Forms.Button();
             this.lblCaminho = new System.Windows.Forms.Label();
             this.cbbPlanilha = new System.Windows.Forms.ComboBox();
-            this.btnAbrir = new System.Windows.Forms.Button();
+            this.btnAbrirDados = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dgvExcel = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExcel)).BeginInit();
             this.SuspendLayout();
@@ -79,13 +80,14 @@
             this.btnFechar.TabIndex = 258;
             this.btnFechar.Text = "X";
             this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // lblCaminho
             // 
             this.lblCaminho.AutoSize = true;
             this.lblCaminho.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCaminho.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCaminho.Location = new System.Drawing.Point(28, 107);
+            this.lblCaminho.Location = new System.Drawing.Point(12, 102);
             this.lblCaminho.Name = "lblCaminho";
             this.lblCaminho.Size = new System.Drawing.Size(72, 19);
             this.lblCaminho.TabIndex = 3;
@@ -93,36 +95,41 @@
             // 
             // cbbPlanilha
             // 
-            this.cbbPlanilha.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbPlanilha.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbPlanilha.FormattingEnabled = true;
-            this.cbbPlanilha.Location = new System.Drawing.Point(106, 103);
+            this.cbbPlanilha.Location = new System.Drawing.Point(90, 98);
             this.cbbPlanilha.Name = "cbbPlanilha";
-            this.cbbPlanilha.Size = new System.Drawing.Size(121, 25);
+            this.cbbPlanilha.Size = new System.Drawing.Size(161, 28);
             this.cbbPlanilha.TabIndex = 5;
             this.cbbPlanilha.SelectedIndexChanged += new System.EventHandler(this.cbbPlanilha_SelectedIndexChanged);
             // 
-            // btnAbrir
+            // btnAbrirDados
             // 
-            this.btnAbrir.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnAbrir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbrir.Location = new System.Drawing.Point(249, 98);
-            this.btnAbrir.Name = "btnAbrir";
-            this.btnAbrir.Size = new System.Drawing.Size(90, 32);
-            this.btnAbrir.TabIndex = 6;
-            this.btnAbrir.Text = "Abrir";
-            this.btnAbrir.UseVisualStyleBackColor = true;
-            this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
+            this.btnAbrirDados.BackColor = System.Drawing.Color.Transparent;
+            this.btnAbrirDados.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.btnAbrirDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbrirDados.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbrirDados.ForeColor = System.Drawing.Color.Black;
+            this.btnAbrirDados.Location = new System.Drawing.Point(257, 96);
+            this.btnAbrirDados.Name = "btnAbrirDados";
+            this.btnAbrirDados.Size = new System.Drawing.Size(90, 32);
+            this.btnAbrirDados.TabIndex = 6;
+            this.btnAbrirDados.Text = "Abrir";
+            this.btnAbrirDados.UseVisualStyleBackColor = false;
+            this.btnAbrirDados.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
             // btnSalvar
             // 
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(778, 555);
+            this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.Color.Black;
+            this.btnSalvar.Location = new System.Drawing.Point(651, 555);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(132, 32);
             this.btnSalvar.TabIndex = 8;
             this.btnSalvar.Text = "Salvar Dados";
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // openFileDialog1
@@ -140,19 +147,36 @@
             this.dgvExcel.Size = new System.Drawing.Size(909, 413);
             this.dgvExcel.TabIndex = 10;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(789, 555);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 32);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Voltar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmEnviarDados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 594);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvExcel);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.btnAbrir);
+            this.Controls.Add(this.btnAbrirDados);
             this.Controls.Add(this.cbbPlanilha);
             this.Controls.Add(this.lblCaminho);
             this.Controls.Add(this.pnlLogin);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(933, 594);
+            this.MinimumSize = new System.Drawing.Size(933, 594);
             this.Name = "frmEnviarDados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "S";
@@ -171,9 +195,10 @@
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Label lblCaminho;
         private System.Windows.Forms.ComboBox cbbPlanilha;
-        private System.Windows.Forms.Button btnAbrir;
+        private System.Windows.Forms.Button btnAbrirDados;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DataGridView dgvExcel;
+        private System.Windows.Forms.Button button1;
     }
 }

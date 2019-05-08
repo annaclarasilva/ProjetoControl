@@ -55,35 +55,141 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassConexaoBd.cs" />
-    <Compile Include="frmEnviarDados.cs">
+    <Compile Include="Alunos\frmEditarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEnviarDados.Designer.cs">
+    <Compile Include="Alunos\frmEditarAluno.Designer.cs">
+      <DependentUpon>frmEditarAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alunos\frmExcluirAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alunos\frmExcluirAluno.Designer.cs">
+      <DependentUpon>frmExcluirAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alunos\frmVerAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alunos\frmVerAluno.Designer.cs">
+      <DependentUpon>frmVerAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassConexaoBd.cs" />
+    <Compile Include="Classes\ClassAcessoBD.cs" />
+    <Compile Include="Empresa\frmCadastrarEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empresa\frmCadastrarEmpresa.Designer.cs">
+      <DependentUpon>frmCadastrarEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empresa\frmEditarEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empresa\frmEditarEmpresa.Designer.cs">
+      <DependentUpon>frmEditarEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Administrador\frmBuscarDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Administrador\frmBuscarDados.Designer.cs">
+      <DependentUpon>frmBuscarDados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Administrador\frmEnviarDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Administrador\frmEnviarDados.Designer.cs">
       <DependentUpon>frmEnviarDados.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="Login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMenuAdm.cs">
+    <Compile Include="Empresa\frmExcluirEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMenuAdm.Designer.cs">
+    <Compile Include="Empresa\frmExcluirEmpresa.Designer.cs">
+      <DependentUpon>frmExcluirEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Administrador\frmManterAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Administrador\frmManterAluno.Designer.cs">
+      <DependentUpon>frmManterAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Administrador\frmManterEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Administrador\frmManterEmpresa.Designer.cs">
+      <DependentUpon>frmManterEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Administrador\frmMenuAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Administrador\frmMenuAdm.Designer.cs">
       <DependentUpon>frmMenuAdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empresa\frmVerEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empresa\frmVerEmpresa.Designer.cs">
+      <DependentUpon>frmVerEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Administrador\frmVincularAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Administrador\frmVincularAluno.Designer.cs">
+      <DependentUpon>frmVincularAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Secretario\frmMenuSecretario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Secretario\frmMenuSecretario.Designer.cs">
+      <DependentUpon>frmMenuSecretario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmEnviarDados.resx">
+    <EmbeddedResource Include="Alunos\frmEditarAluno.resx">
+      <DependentUpon>frmEditarAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alunos\frmExcluirAluno.resx">
+      <DependentUpon>frmExcluirAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alunos\frmVerAluno.resx">
+      <DependentUpon>frmVerAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empresa\frmCadastrarEmpresa.resx">
+      <DependentUpon>frmCadastrarEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empresa\frmEditarEmpresa.resx">
+      <DependentUpon>frmEditarEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Administrador\frmBuscarDados.resx">
+      <DependentUpon>frmBuscarDados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Administrador\frmEnviarDados.resx">
       <DependentUpon>frmEnviarDados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMenuAdm.resx">
+    <EmbeddedResource Include="Empresa\frmExcluirEmpresa.resx">
+      <DependentUpon>frmExcluirEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Administrador\frmManterAluno.resx">
+      <DependentUpon>frmManterAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Administrador\frmManterEmpresa.resx">
+      <DependentUpon>frmManterEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Administrador\frmMenuAdm.resx">
       <DependentUpon>frmMenuAdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empresa\frmVerEmpresa.resx">
+      <DependentUpon>frmVerEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Secretario\frmMenuSecretario.resx">
+      <DependentUpon>frmMenuSecretario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,6 +214,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
