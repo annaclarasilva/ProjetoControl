@@ -16,5 +16,19 @@ namespace AppProjetoControl.Menu_Secretario
         {
             InitializeComponent();
         }
+
+        private void btnVerAluno_Click(object sender, EventArgs e)
+        {
+            frmVisualizarAluno verAluno = new frmVisualizarAluno();
+            this.Hide();
+            verAluno.Show();
+        }
+
+        private void btnVerEmpresas_Click(object sender, EventArgs e)
+        {
+            frmVisualizarEmpresa verEmpresa = new frmVisualizarEmpresa();
+            this.Hide();
+            verEmpresa.Show();
+        }
     }
 }

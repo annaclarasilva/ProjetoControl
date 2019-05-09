@@ -16,5 +16,12 @@ namespace AppProjetoControl.Menu_Administrador
         {
             InitializeComponent();
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            frmMenuAdm menuAdm = new frmMenuAdm();
+            this.Hide();
+            menuAdm.Show();
+        }
     }
 }

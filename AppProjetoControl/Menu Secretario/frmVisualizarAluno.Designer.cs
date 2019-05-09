@@ -1,6 +1,6 @@
-﻿namespace AppProjetoControl.Menu_Administrador
+﻿namespace AppProjetoControl.Menu_Secretario
 {
-    partial class frmVerEmpresa
+    partial class frmVisualizarAluno
     {
         /// <summary>
         /// Required designer variable.
@@ -28,67 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvVerEmpresas = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvVisualizarAlunos = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVerEmpresas)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVisualizarAlunos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvVerEmpresas
-            // 
-            this.dgvVerEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVerEmpresas.Location = new System.Drawing.Point(12, 97);
-            this.dgvVerEmpresas.Name = "dgvVerEmpresas";
-            this.dgvVerEmpresas.Size = new System.Drawing.Size(689, 455);
-            this.dgvVerEmpresas.TabIndex = 0;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.panel1.BackColor = System.Drawing.Color.Red;
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(713, 80);
-            this.panel1.TabIndex = 31;
+            this.panel1.Size = new System.Drawing.Size(939, 100);
+            this.panel1.TabIndex = 0;
+            // 
+            // dgvVisualizarAlunos
+            // 
+            this.dgvVisualizarAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVisualizarAlunos.Location = new System.Drawing.Point(12, 106);
+            this.dgvVisualizarAlunos.Name = "dgvVisualizarAlunos";
+            this.dgvVisualizarAlunos.Size = new System.Drawing.Size(915, 476);
+            this.dgvVisualizarAlunos.TabIndex = 34;
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTitulo.Location = new System.Drawing.Point(176, 20);
+            this.lblTitulo.Location = new System.Drawing.Point(299, 32);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(348, 36);
-            this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "EMPRESAS CADSTRADAS";
+            this.lblTitulo.Size = new System.Drawing.Size(369, 36);
+            this.lblTitulo.TabIndex = 2;
+            this.lblTitulo.Text = "EMPRESAS CADASTRADAS";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // frmVerEmpresa
+            // frmVisualizarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 564);
+            this.ClientSize = new System.Drawing.Size(939, 594);
+            this.Controls.Add(this.dgvVisualizarAlunos);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvVerEmpresas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(713, 564);
-            this.MinimumSize = new System.Drawing.Size(713, 564);
-            this.Name = "frmVerEmpresa";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmVerEmpresa";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVerEmpresas)).EndInit();
+            this.MaximumSize = new System.Drawing.Size(939, 594);
+            this.MinimumSize = new System.Drawing.Size(939, 594);
+            this.Name = "frmVisualizarAluno";
+            this.Text = "frmVisualizarAluno";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVisualizarAlunos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvVerEmpresas;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dgvVisualizarAlunos;
         private System.Windows.Forms.Label lblTitulo;
     }
 }

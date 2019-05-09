@@ -51,11 +51,6 @@ namespace AppProjetoControl.Menu_Administrador
             AbrirFormPanel(new frmEditarEmpresa());
         }
 
-        private void btnExcluirEmpresa_Click(object sender, EventArgs e)
-        {
-            AbrirFormPanel(new frmExcluirEmpresa());
-        }
-
         private void btnVerEmpresaCadastradas_Click(object sender, EventArgs e)
         {
             AbrirFormPanel(new frmVerEmpresa());
