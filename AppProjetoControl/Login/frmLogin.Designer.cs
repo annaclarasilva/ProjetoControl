@@ -33,7 +33,7 @@
             this.btnFechar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -67,6 +67,7 @@
             this.btnFechar.TabIndex = 258;
             this.btnFechar.Text = "X";
             this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // lblTitulo
             // 
@@ -89,13 +90,13 @@
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuário:";
             // 
-            // textBox1
+            // txtUsuario
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(149, 214);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 26);
-            this.textBox1.TabIndex = 2;
+            this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(149, 214);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(144, 26);
+            this.txtUsuario.TabIndex = 2;
             // 
             // txtSenha
             // 
@@ -147,7 +148,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.lblSenha);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.pnlLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -167,7 +168,7 @@
         private System.Windows.Forms.Panel pnlLogin;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.PictureBox pictureBox1;

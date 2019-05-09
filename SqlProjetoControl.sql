@@ -7,10 +7,17 @@ CREATE TABLE Empresa(
 	nomeFantasia	VARCHAR (100) NOT NULL,
 	telefone		VARCHAR (13) NOT NULL,
 	razaoSocial		VARCHAR (20) NOT NULL,
-	endereco		VARCHAR (150) NOT NULL,
-	cnjp			VARCHAR (20) PRIMARY KEY  NOT NULL,
+	cnpj			VARCHAR (20) PRIMARY KEY  NOT NULL,
 	email			VARCHAR (100) NOT NULL,
-	responsavel		VARCHAR (100) NOT NULL
+	responsavel		VARCHAR (100) NOT NULL,
+	rua				VARCHAR (100) NOT NULL,
+	numero			INT NOT NULL,
+	complemento		VARCHAR (50) NOT NULL,
+	bairro			VARCHAR (50) NOT NULL,
+	estado			CHAR (2) NOT NULL,
+	cidade			CHAR (50) NOT NULL,
+	cep				CHAR (9) NOT NULL,
+
 );
 
 CREATE TABLE Semestre (
@@ -52,9 +59,17 @@ CREATE TABLE Aluno(
 	FOREIGN KEY (Semestre_codSemestre) REFERENCES Semestre (codSemestre),
 );
 
-CREATE TABLE Funcionario (
+CREATE TABLE Usuario (
 	usuario VARCHAR (15),
 	tipoFunc INT,
 	senha VARCHAR (8),
 	cpf VARCHAR (13) PRIMARY KEY NOT NULL,
 );
+
+INSERT INTO Usuario VALUES ('michel',1,'michel12','250111760-37'),
+								('rafael',2,'rafa123','858919320-91')
+
+SELECT * FROM Usuario
+
+--use master
+--drop database bdProjetoControl
