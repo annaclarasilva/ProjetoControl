@@ -30,7 +30,7 @@ namespace AppProjetoControl
         //Criando o objeto da classe de conexão como banco de dados
         ClassConexaoBd bd = new ClassConexaoBd();
 
-        //Método para inserir Funcionário com o parametro do Código do Usuário que irá realizar o cadastro
+      
         public bool InserirEmpresa()
         {
             try
@@ -53,7 +53,7 @@ namespace AppProjetoControl
 
         }
 
-        //Método para editar Funcionário com o parametro do Código do Funcionário que irá ser editado
+        
         public bool Editar(string cnpjEditar)
         {
             try
@@ -75,7 +75,7 @@ namespace AppProjetoControl
         }
 
       
-        //Método para retornar os dados do funcionário 
+        
         public DataTable RetEmpresa()
         {
             //Conectando com o banco 

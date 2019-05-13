@@ -66,15 +66,15 @@ namespace AppProjetoControl
             }
         }
 
-        //Método para excluir Funcionário com o parametro do Código do Funcionário que irá ser excluido
-        public bool Excluir(string cpfUsuarioEditar)
+      
+        public bool Excluir(string cpfUsuarioExcluir)
         {
             try
             {
                 //Conectando o banco 
                 bd.Conectar();
                 //Executando o DELETE
-                bd.ExecutarComandosSql(String.Format("DELETE FROM Usuario WHERE cpf LIKE '{0}'", cpfUsuarioEditar));
+                bd.ExecutarComandosSql(String.Format("DELETE FROM Usuario WHERE cpf LIKE '{0}'", cpfUsuarioExcluir));
                 //Desconectando o banco
                 bd.Desconectar();
                 //Se o DELETE der certo retorna true
@@ -87,7 +87,7 @@ namespace AppProjetoControl
             }
         }
 
-        //Método para retornar os dados do funcionário 
+        
         public DataTable RetUsuario()
         {
             //Conectando com o banco 

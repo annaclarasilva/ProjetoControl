@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Correios.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Correios.CEP.Net.1.1.6\lib\Correios.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
       <Private>True</Private>
@@ -74,8 +78,9 @@
       <DependentUpon>frmVerAluno.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassConexaoBd.cs" />
+    <Compile Include="ClassEmpresa.cs" />
     <Compile Include="Classes\ClassAcessoBD.cs" />
-    <Compile Include="ClassUsuario.cs" />
+    <Compile Include="Classes\ClassUsuario.cs" />
     <Compile Include="Empresa\frmCadastrarEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
