@@ -142,6 +142,7 @@
             this.MaximumSize = new System.Drawing.Size(933, 594);
             this.MinimumSize = new System.Drawing.Size(933, 594);
             this.Name = "frmManterAluno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmManterAluno";
             this.pnlMenu.ResumeLayout(false);
             this.ResumeLayout(false);

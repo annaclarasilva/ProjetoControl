@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AppProjetoControl.Menu_Administrador
+namespace AppProjetoControl.Menu_Secretario
 {
-    public partial class frmExcluirEmpresa : Form
+    public partial class frmVisualizarAluno : Form
     {
-        public frmExcluirEmpresa()
+        public frmVisualizarAluno()
         {
             InitializeComponent();
         }

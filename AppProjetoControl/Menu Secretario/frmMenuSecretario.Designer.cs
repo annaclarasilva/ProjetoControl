@@ -32,7 +32,6 @@
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnVerEmpresas = new System.Windows.Forms.Button();
-            this.btnGerarRelatorio = new System.Windows.Forms.Button();
             this.btnVerAluno = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlLogin.SuspendLayout();
@@ -83,26 +82,13 @@
             this.btnVerEmpresas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerEmpresas.ForeColor = System.Drawing.Color.Black;
             this.btnVerEmpresas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnVerEmpresas.Location = new System.Drawing.Point(221, 312);
+            this.btnVerEmpresas.Location = new System.Drawing.Point(221, 300);
             this.btnVerEmpresas.Name = "btnVerEmpresas";
             this.btnVerEmpresas.Size = new System.Drawing.Size(280, 31);
             this.btnVerEmpresas.TabIndex = 279;
             this.btnVerEmpresas.Text = "Ver Empresas";
             this.btnVerEmpresas.UseVisualStyleBackColor = true;
-            // 
-            // btnGerarRelatorio
-            // 
-            this.btnGerarRelatorio.FlatAppearance.BorderSize = 0;
-            this.btnGerarRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerarRelatorio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerarRelatorio.ForeColor = System.Drawing.Color.Black;
-            this.btnGerarRelatorio.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGerarRelatorio.Location = new System.Drawing.Point(221, 275);
-            this.btnGerarRelatorio.Name = "btnGerarRelatorio";
-            this.btnGerarRelatorio.Size = new System.Drawing.Size(280, 31);
-            this.btnGerarRelatorio.TabIndex = 278;
-            this.btnGerarRelatorio.Text = "Gerar Relatório";
-            this.btnGerarRelatorio.UseVisualStyleBackColor = true;
+            this.btnVerEmpresas.Click += new System.EventHandler(this.btnVerEmpresas_Click);
             // 
             // btnVerAluno
             // 
@@ -111,12 +97,13 @@
             this.btnVerAluno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerAluno.ForeColor = System.Drawing.Color.Black;
             this.btnVerAluno.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnVerAluno.Location = new System.Drawing.Point(221, 238);
+            this.btnVerAluno.Location = new System.Drawing.Point(221, 263);
             this.btnVerAluno.Name = "btnVerAluno";
             this.btnVerAluno.Size = new System.Drawing.Size(280, 31);
             this.btnVerAluno.TabIndex = 277;
             this.btnVerAluno.Text = "Ver Alunos";
             this.btnVerAluno.UseVisualStyleBackColor = true;
+            this.btnVerAluno.Click += new System.EventHandler(this.btnVerAluno_Click);
             // 
             // label1
             // 
@@ -137,7 +124,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 458);
             this.Controls.Add(this.btnVerEmpresas);
-            this.Controls.Add(this.btnGerarRelatorio);
             this.Controls.Add(this.btnVerAluno);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlLogin);
@@ -160,7 +146,6 @@
         private System.Windows.Forms.Panel pnlLogin;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Button btnVerEmpresas;
-        private System.Windows.Forms.Button btnGerarRelatorio;
         private System.Windows.Forms.Button btnVerAluno;
         private System.Windows.Forms.Label label1;
     }

@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnVerEmpresaCadastradas = new System.Windows.Forms.Button();
-            this.btnExcluirEmpresa = new System.Windows.Forms.Button();
             this.btnEditarEmpresa = new System.Windows.Forms.Button();
             this.btnCadastrarEmpresa = new System.Windows.Forms.Button();
             this.pnlMostrar = new System.Windows.Forms.Panel();
@@ -45,7 +44,6 @@
             this.pnlMenu.Controls.Add(this.panel1);
             this.pnlMenu.Controls.Add(this.btnVoltar);
             this.pnlMenu.Controls.Add(this.btnVerEmpresaCadastradas);
-            this.pnlMenu.Controls.Add(this.btnExcluirEmpresa);
             this.pnlMenu.Controls.Add(this.btnEditarEmpresa);
             this.pnlMenu.Controls.Add(this.btnCadastrarEmpresa);
             this.pnlMenu.Controls.Add(this.pnlMostrar);
@@ -85,29 +83,13 @@
             this.btnVerEmpresaCadastradas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerEmpresaCadastradas.ForeColor = System.Drawing.Color.Black;
             this.btnVerEmpresaCadastradas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnVerEmpresaCadastradas.Location = new System.Drawing.Point(4, 362);
+            this.btnVerEmpresaCadastradas.Location = new System.Drawing.Point(5, 355);
             this.btnVerEmpresaCadastradas.Name = "btnVerEmpresaCadastradas";
             this.btnVerEmpresaCadastradas.Size = new System.Drawing.Size(183, 49);
             this.btnVerEmpresaCadastradas.TabIndex = 266;
             this.btnVerEmpresaCadastradas.Text = "Ver Empresas Cadastradas";
             this.btnVerEmpresaCadastradas.UseVisualStyleBackColor = false;
             this.btnVerEmpresaCadastradas.Click += new System.EventHandler(this.btnVerEmpresaCadastradas_Click);
-            // 
-            // btnExcluirEmpresa
-            // 
-            this.btnExcluirEmpresa.BackColor = System.Drawing.Color.Transparent;
-            this.btnExcluirEmpresa.FlatAppearance.BorderSize = 0;
-            this.btnExcluirEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluirEmpresa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluirEmpresa.ForeColor = System.Drawing.Color.Black;
-            this.btnExcluirEmpresa.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnExcluirEmpresa.Location = new System.Drawing.Point(4, 307);
-            this.btnExcluirEmpresa.Name = "btnExcluirEmpresa";
-            this.btnExcluirEmpresa.Size = new System.Drawing.Size(183, 49);
-            this.btnExcluirEmpresa.TabIndex = 265;
-            this.btnExcluirEmpresa.Text = "Excluir Empresa";
-            this.btnExcluirEmpresa.UseVisualStyleBackColor = false;
-            this.btnExcluirEmpresa.Click += new System.EventHandler(this.btnExcluirEmpresa_Click);
             // 
             // btnEditarEmpresa
             // 
@@ -117,7 +99,7 @@
             this.btnEditarEmpresa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarEmpresa.ForeColor = System.Drawing.Color.Black;
             this.btnEditarEmpresa.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnEditarEmpresa.Location = new System.Drawing.Point(4, 252);
+            this.btnEditarEmpresa.Location = new System.Drawing.Point(4, 300);
             this.btnEditarEmpresa.Name = "btnEditarEmpresa";
             this.btnEditarEmpresa.Size = new System.Drawing.Size(183, 49);
             this.btnEditarEmpresa.TabIndex = 264;
@@ -133,7 +115,7 @@
             this.btnCadastrarEmpresa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarEmpresa.ForeColor = System.Drawing.Color.Black;
             this.btnCadastrarEmpresa.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCadastrarEmpresa.Location = new System.Drawing.Point(5, 192);
+            this.btnCadastrarEmpresa.Location = new System.Drawing.Point(5, 240);
             this.btnCadastrarEmpresa.Name = "btnCadastrarEmpresa";
             this.btnCadastrarEmpresa.Size = new System.Drawing.Size(183, 54);
             this.btnCadastrarEmpresa.TabIndex = 263;
@@ -172,7 +154,6 @@
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnVerEmpresaCadastradas;
-        private System.Windows.Forms.Button btnExcluirEmpresa;
         private System.Windows.Forms.Button btnEditarEmpresa;
         private System.Windows.Forms.Button btnCadastrarEmpresa;
         private System.Windows.Forms.Panel pnlMostrar;
