@@ -36,7 +36,7 @@
             this.lblGrauInstrucao = new System.Windows.Forms.Label();
             this.txtIdade = new System.Windows.Forms.TextBox();
             this.lblIdade = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboSexo = new System.Windows.Forms.ComboBox();
             this.lblSexo = new System.Windows.Forms.Label();
             this.txtGrau = new System.Windows.Forms.TextBox();
             this.lblEndereco = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@
             this.lblBairro = new System.Windows.Forms.Label();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtComplemento = new System.Windows.Forms.TextBox();
             this.lblComplemento = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.lblCidade = new System.Windows.Forms.Label();
@@ -75,15 +75,16 @@
             this.lblNomeCurso = new System.Windows.Forms.Label();
             this.txtCodTurma = new System.Windows.Forms.TextBox();
             this.lblCodTurma = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtStatusAluno = new System.Windows.Forms.TextBox();
             this.lblStatusAluno = new System.Windows.Forms.Label();
             this.mskTelefoneAluno = new System.Windows.Forms.MaskedTextBox();
             this.lblTelefoneAluno = new System.Windows.Forms.Label();
             this.txtCnpjEmpresa = new System.Windows.Forms.TextBox();
             this.lblCnpj = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCodSemestre = new System.Windows.Forms.TextBox();
             this.lblCodigoSemestre = new System.Windows.Forms.Label();
             this.dgvEditarAlunos = new System.Windows.Forms.DataGridView();
+            this.txtBusca = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditarAlunos)).BeginInit();
             this.SuspendLayout();
@@ -116,12 +117,13 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.Black;
-            this.btnEditar.Location = new System.Drawing.Point(544, 876);
+            this.btnEditar.Location = new System.Drawing.Point(555, 876);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(132, 32);
             this.btnEditar.TabIndex = 39;
             this.btnEditar.Text = "Editar Dados";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
             // txtNome
             // 
@@ -171,17 +173,17 @@
             this.lblIdade.TabIndex = 62;
             this.lblIdade.Text = "Idade:";
             // 
-            // comboBox1
+            // cboSexo
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboSexo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSexo.FormattingEnabled = true;
+            this.cboSexo.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.comboBox1.Location = new System.Drawing.Point(504, 92);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 29);
-            this.comboBox1.TabIndex = 3;
+            this.cboSexo.Location = new System.Drawing.Point(504, 92);
+            this.cboSexo.Name = "cboSexo";
+            this.cboSexo.Size = new System.Drawing.Size(121, 29);
+            this.cboSexo.TabIndex = 3;
             // 
             // lblSexo
             // 
@@ -288,14 +290,14 @@
             this.lblEstado.TabIndex = 76;
             this.lblEstado.Text = "Estado:";
             // 
-            // textBox1
+            // txtComplemento
             // 
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(479, 271);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 27);
-            this.textBox1.TabIndex = 13;
+            this.txtComplemento.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtComplemento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComplemento.Location = new System.Drawing.Point(479, 271);
+            this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.Size = new System.Drawing.Size(175, 27);
+            this.txtComplemento.TabIndex = 13;
             // 
             // lblComplemento
             // 
@@ -544,14 +546,14 @@
             this.lblCodTurma.TabIndex = 103;
             this.lblCodTurma.Text = "Código da Turma:";
             // 
-            // textBox2
+            // txtStatusAluno
             // 
-            this.textBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(151, 541);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(503, 27);
-            this.textBox2.TabIndex = 104;
+            this.txtStatusAluno.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtStatusAluno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStatusAluno.Location = new System.Drawing.Point(151, 541);
+            this.txtStatusAluno.Name = "txtStatusAluno";
+            this.txtStatusAluno.Size = new System.Drawing.Size(503, 27);
+            this.txtStatusAluno.TabIndex = 104;
             // 
             // lblStatusAluno
             // 
@@ -601,14 +603,14 @@
             this.lblCnpj.TabIndex = 109;
             this.lblCnpj.Text = "CNPJ da Empresa:";
             // 
-            // textBox3
+            // txtCodSemestre
             // 
-            this.textBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(193, 634);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(196, 27);
-            this.textBox3.TabIndex = 110;
+            this.txtCodSemestre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCodSemestre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodSemestre.Location = new System.Drawing.Point(193, 634);
+            this.txtCodSemestre.Name = "txtCodSemestre";
+            this.txtCodSemestre.Size = new System.Drawing.Size(196, 27);
+            this.txtCodSemestre.TabIndex = 110;
             // 
             // lblCodigoSemestre
             // 
@@ -623,10 +625,22 @@
             // dgvEditarAlunos
             // 
             this.dgvEditarAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEditarAlunos.Location = new System.Drawing.Point(23, 667);
+            this.dgvEditarAlunos.Location = new System.Drawing.Point(23, 697);
             this.dgvEditarAlunos.Name = "dgvEditarAlunos";
-            this.dgvEditarAlunos.Size = new System.Drawing.Size(664, 196);
+            this.dgvEditarAlunos.Size = new System.Drawing.Size(664, 166);
             this.dgvEditarAlunos.TabIndex = 112;
+            // 
+            // txtBusca
+            // 
+            this.txtBusca.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBusca.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusca.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtBusca.Location = new System.Drawing.Point(491, 664);
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.Size = new System.Drawing.Size(196, 27);
+            this.txtBusca.TabIndex = 113;
+            this.txtBusca.Text = "Busque o aluno pelo...";
+            this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);
             // 
             // frmEditarAluno
             // 
@@ -634,14 +648,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(706, 920);
+            this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.dgvEditarAlunos);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtCodSemestre);
             this.Controls.Add(this.lblCodigoSemestre);
             this.Controls.Add(this.txtCnpjEmpresa);
             this.Controls.Add(this.lblCnpj);
             this.Controls.Add(this.mskTelefoneAluno);
             this.Controls.Add(this.lblTelefoneAluno);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtStatusAluno);
             this.Controls.Add(this.lblStatusAluno);
             this.Controls.Add(this.txtCodTurma);
             this.Controls.Add(this.lblCodTurma);
@@ -665,7 +680,7 @@
             this.Controls.Add(this.lblIdentidade);
             this.Controls.Add(this.mskTelefone);
             this.Controls.Add(this.lblTelefoneResidencia);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtComplemento);
             this.Controls.Add(this.lblComplemento);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.lblCidade);
@@ -681,7 +696,7 @@
             this.Controls.Add(this.lblEndereco);
             this.Controls.Add(this.txtGrau);
             this.Controls.Add(this.lblSexo);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboSexo);
             this.Controls.Add(this.txtIdade);
             this.Controls.Add(this.lblIdade);
             this.Controls.Add(this.txtNome);
@@ -711,7 +726,7 @@
         private System.Windows.Forms.Label lblGrauInstrucao;
         private System.Windows.Forms.TextBox txtIdade;
         private System.Windows.Forms.Label lblIdade;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboSexo;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.TextBox txtGrau;
         private System.Windows.Forms.Label lblEndereco;
@@ -723,7 +738,7 @@
         private System.Windows.Forms.Label lblBairro;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.Label lblComplemento;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label lblCidade;
@@ -750,14 +765,15 @@
         private System.Windows.Forms.Label lblNomeCurso;
         private System.Windows.Forms.TextBox txtCodTurma;
         private System.Windows.Forms.Label lblCodTurma;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtStatusAluno;
         private System.Windows.Forms.Label lblStatusAluno;
         private System.Windows.Forms.MaskedTextBox mskTelefoneAluno;
         private System.Windows.Forms.Label lblTelefoneAluno;
         private System.Windows.Forms.TextBox txtCnpjEmpresa;
         private System.Windows.Forms.Label lblCnpj;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCodSemestre;
         private System.Windows.Forms.Label lblCodigoSemestre;
         private System.Windows.Forms.DataGridView dgvEditarAlunos;
+        private System.Windows.Forms.TextBox txtBusca;
     }
 }

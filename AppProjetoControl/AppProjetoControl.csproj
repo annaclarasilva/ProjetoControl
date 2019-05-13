@@ -77,12 +77,12 @@
     <Compile Include="Alunos\frmVerAluno.Designer.cs">
       <DependentUpon>frmVerAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClassAluno.cs" />
+    <Compile Include="Classes\ClassAluno.cs" />
     <Compile Include="Classes\ClassConexaoBd.cs" />
     <Compile Include="Classes\ClassEmpresa.cs" />
     <Compile Include="Classes\ClassAcessoBD.cs" />
     <Compile Include="Classes\ClassUsuario.cs" />
-    <Compile Include="ClassSemestre.cs" />
+    <Compile Include="Classes\ClassSemestre.cs" />
     <Compile Include="Empresa\frmCadastrarEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>

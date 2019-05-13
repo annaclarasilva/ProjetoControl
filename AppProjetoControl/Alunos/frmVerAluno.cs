@@ -12,9 +12,15 @@ namespace AppProjetoControl.Alunos
 {
     public partial class frmVerAluno : Form
     {
+        ClassAluno aluno = new ClassAluno();
         public frmVerAluno()
         {
             InitializeComponent();
+        }
+
+        private void dgvVerAlunos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //dgvVerAlunos.DataSource = aluno.RetAluno();
         }
     }
 }

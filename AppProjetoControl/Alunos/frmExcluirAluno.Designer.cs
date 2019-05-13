@@ -31,10 +31,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtBusca = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvAlunoExcluir = new System.Windows.Forms.DataGridView();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.txtRa = new System.Windows.Forms.TextBox();
+            this.lblRa = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlunoExcluir)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,19 +66,22 @@
             this.txtBusca.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBusca.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusca.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtBusca.Location = new System.Drawing.Point(12, 86);
+            this.txtBusca.Location = new System.Drawing.Point(12, 163);
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(689, 28);
             this.txtBusca.TabIndex = 55;
             this.txtBusca.Text = "Busque o aluno pelo CPF; Número da Carteira de Identidade ou pelo RA";
+            this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
+            this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);
             // 
-            // dataGridView1
+            // dgvAlunoExcluir
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 120);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(689, 394);
-            this.dataGridView1.TabIndex = 56;
+            this.dgvAlunoExcluir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlunoExcluir.Location = new System.Drawing.Point(12, 197);
+            this.dgvAlunoExcluir.Name = "dgvAlunoExcluir";
+            this.dgvAlunoExcluir.Size = new System.Drawing.Size(689, 317);
+            this.dgvAlunoExcluir.TabIndex = 56;
+            this.dgvAlunoExcluir.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlunoExcluir_CellContentClick);
             // 
             // btnExcluir
             // 
@@ -90,14 +95,36 @@
             this.btnExcluir.TabIndex = 57;
             this.btnExcluir.Text = "Excluir Dados";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // txtRa
+            // 
+            this.txtRa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRa.Location = new System.Drawing.Point(146, 105);
+            this.txtRa.Name = "txtRa";
+            this.txtRa.Size = new System.Drawing.Size(346, 27);
+            this.txtRa.TabIndex = 58;
+            // 
+            // lblRa
+            // 
+            this.lblRa.AutoSize = true;
+            this.lblRa.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRa.Location = new System.Drawing.Point(12, 109);
+            this.lblRa.Name = "lblRa";
+            this.lblRa.Size = new System.Drawing.Size(128, 23);
+            this.lblRa.TabIndex = 59;
+            this.lblRa.Text = "RA do Aluno:";
             // 
             // frmExcluirAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(713, 564);
+            this.Controls.Add(this.txtRa);
+            this.Controls.Add(this.lblRa);
+            this.Controls.Add(this.dgvAlunoExcluir);
             this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -106,9 +133,10 @@
             this.Name = "frmExcluirAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmExcluirAluno";
+            this.Load += new System.EventHandler(this.frmExcluirAluno_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlunoExcluir)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,7 +147,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox txtBusca;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvAlunoExcluir;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.TextBox txtRa;
+        private System.Windows.Forms.Label lblRa;
     }
 }

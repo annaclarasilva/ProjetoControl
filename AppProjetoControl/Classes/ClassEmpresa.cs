@@ -122,11 +122,6 @@ namespace AppProjetoControl
             bd.Desconectar();
             //Retornando o objeto com o SELECT
             return dt;
-        }       
-
-        
+        }          
     }
-
-
-}
 }

@@ -12,9 +12,15 @@ namespace AppProjetoControl.Menu_Administrador
 {
     public partial class frmVerEmpresa : Form
     {
+        ClassEmpresa empresa = new ClassEmpresa();
         public frmVerEmpresa()
         {
             InitializeComponent();
+        }
+
+        private void dgvVerEmpresas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvVerEmpresas.DataSource = empresa.RetEmpresa();
         }
     }
 }

@@ -39,24 +39,16 @@ namespace AppProjetoControl
                     menu.Show();
                 }
                 else
-                {
-                    
+                {                   
                     MessageBox.Show("è 2");
                     //this.Hide();
                     //menu.Show();
                 }
-               
-
             }
             else
             {
                 MessageBox.Show("Login e senha errados. Tente novamente.");
-            }
-
-
-
-
-            
+            }            
         }
 
         private void btnFechar_Click(object sender, EventArgs e)

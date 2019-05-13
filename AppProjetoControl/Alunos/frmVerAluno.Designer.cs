@@ -64,6 +64,7 @@
             this.dgvVerAlunos.Name = "dgvVerAlunos";
             this.dgvVerAlunos.Size = new System.Drawing.Size(689, 455);
             this.dgvVerAlunos.TabIndex = 33;
+            this.dgvVerAlunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVerAlunos_CellContentClick);
             // 
             // frmVerAluno
             // 

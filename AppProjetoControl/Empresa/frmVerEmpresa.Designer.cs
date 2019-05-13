@@ -42,6 +42,7 @@
             this.dgvVerEmpresas.Name = "dgvVerEmpresas";
             this.dgvVerEmpresas.Size = new System.Drawing.Size(689, 455);
             this.dgvVerEmpresas.TabIndex = 0;
+            this.dgvVerEmpresas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVerEmpresas_CellContentClick);
             // 
             // panel1
             // 
