@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppProjetoControl.Menu_Secretario;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,10 +40,10 @@ namespace AppProjetoControl
                     menu.Show();
                 }
                 else
-                {                   
-                    MessageBox.Show("è 2");
-                    //this.Hide();
-                    //menu.Show();
+                {
+                    frmSecretarioMenu menu = new frmSecretarioMenu();
+                    this.Hide();
+                    menu.Show();
                 }
             }
             else

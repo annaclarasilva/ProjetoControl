@@ -20,6 +20,11 @@ namespace AppProjetoControl.Menu_Administrador
 
         private void dgvVerEmpresas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+           
+        }
+
+        private void frmVerEmpresa_Load(object sender, EventArgs e)
+        {
             dgvVerEmpresas.DataSource = empresa.RetEmpresa();
         }
     }

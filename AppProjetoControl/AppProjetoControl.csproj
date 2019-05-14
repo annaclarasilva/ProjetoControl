@@ -113,10 +113,6 @@
     <Compile Include="Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Empresa\frmExcluirEmpresa.cs" />
-    <Compile Include="Empresa\frmExcluirEmpresa.Designer.cs">
-      <DependentUpon>frmExcluirEmpresa.cs</DependentUpon>
-    </Compile>
     <Compile Include="Menu Administrador\frmManterAluno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,11 +143,23 @@
     <Compile Include="Menu Administrador\frmVincularAluno.Designer.cs">
       <DependentUpon>frmVincularAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu Secretario\frmMenuSecretario.cs">
+    <Compile Include="Menu Secretario\frmAlunoVisualizar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu Secretario\frmMenuSecretario.Designer.cs">
-      <DependentUpon>frmMenuSecretario.cs</DependentUpon>
+    <Compile Include="Menu Secretario\frmAlunoVisualizar.Designer.cs">
+      <DependentUpon>frmAlunoVisualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Secretario\frmEmpresaVisualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Secretario\frmEmpresaVisualizar.Designer.cs">
+      <DependentUpon>frmEmpresaVisualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Secretario\frmSecretarioMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Secretario\frmSecretarioMenu.Designer.cs">
+      <DependentUpon>frmSecretarioMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -179,9 +187,6 @@
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Empresa\frmExcluirEmpresa.resx">
-      <DependentUpon>frmExcluirEmpresa.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Menu Administrador\frmManterAluno.resx">
       <DependentUpon>frmManterAluno.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,8 +199,14 @@
     <EmbeddedResource Include="Empresa\frmVerEmpresa.resx">
       <DependentUpon>frmVerEmpresa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu Secretario\frmMenuSecretario.resx">
-      <DependentUpon>frmMenuSecretario.cs</DependentUpon>
+    <EmbeddedResource Include="Menu Secretario\frmAlunoVisualizar.resx">
+      <DependentUpon>frmAlunoVisualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Secretario\frmEmpresaVisualizar.resx">
+      <DependentUpon>frmEmpresaVisualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Secretario\frmSecretarioMenu.resx">
+      <DependentUpon>frmSecretarioMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -12,6 +12,7 @@ namespace AppProjetoControl.Menu_Administrador
 {
     public partial class frmBuscarDados : Form
     {
+        ClassAluno aluno = new ClassAluno();
         public frmBuscarDados()
         {
             InitializeComponent();
@@ -22,6 +23,22 @@ namespace AppProjetoControl.Menu_Administrador
             frmMenuAdm menuAdm = new frmMenuAdm();
             this.Hide();
             menuAdm.Show();
+        }
+
+        private void txtBusca_Enter(object sender, EventArgs e)
+        {
+            txtBusca.Text = "";
+            txtBusca.ForeColor = Color.Black;
+        }
+
+        private void txtBusca_TextChanged(object sender, EventArgs e)
+        {
+            dgvBuscarDados.DataSource = aluno.RetAluno();
+        }
+
+        private void frmBuscarDados_Load(object sender, EventArgs e)
+        {
+            dgvBuscarDados.DataSource = aluno.RetAluno();
         }
     }
 }

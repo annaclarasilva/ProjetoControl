@@ -79,6 +79,7 @@
             this.Name = "frmVerEmpresa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVerEmpresa";
+            this.Load += new System.EventHandler(this.frmVerEmpresa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerEmpresas)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

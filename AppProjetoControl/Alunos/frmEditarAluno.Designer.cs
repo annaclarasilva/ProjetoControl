@@ -708,6 +708,7 @@
             this.Name = "frmEditarAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditarAluno";
+            this.Load += new System.EventHandler(this.frmEditarAluno_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditarAlunos)).EndInit();

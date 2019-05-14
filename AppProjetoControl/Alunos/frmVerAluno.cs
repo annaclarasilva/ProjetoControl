@@ -20,7 +20,12 @@ namespace AppProjetoControl.Alunos
 
         private void dgvVerAlunos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //dgvVerAlunos.DataSource = aluno.RetAluno();
+            
+        }
+
+        private void frmVerAluno_Load(object sender, EventArgs e)
+        {
+            dgvVerAlunos.DataSource = aluno.RetAluno();
         }
     }
 }

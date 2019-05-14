@@ -21,12 +21,12 @@ namespace AppProjetoControl.Alunos
 
         private void frmExcluirAluno_Load(object sender, EventArgs e)
         {
-            //dgvAlunoExcluir.DataSource = aluno.RetAluno();
+            dgvAlunoExcluir.DataSource = aluno.RetAluno();
         }
 
         private void txtBusca_TextChanged(object sender, EventArgs e)
         {
-            //dgvAlunoExcluir.DataSource = aluno.RetAlunoBusca(txtBusca.Text);
+            dgvAlunoExcluir.DataSource = aluno.RetAlunoBusca(txtBusca.Text);
         }
 
         private void txtBusca_Enter(object sender, EventArgs e)
@@ -46,19 +46,19 @@ namespace AppProjetoControl.Alunos
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            //DialogResult result = MessageBox.Show("Tem certeza que deseja excluir esse aluno?", "Confirmação", MessageBoxButtons.YesNoCancel);
-            //if (result == DialogResult.Yes)
-            //{
-            //    if (aluno.Excluir(idClicado) == true)
-            //    {
-            //        MessageBox.Show("Exclusão concluida com sucesso.");
-            //        dgvAlunoExcluir.DataSource = alnuo.RetAluno();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Exclusão não concluída. Tente novamente.");
-            //    }
-            //}
+            DialogResult result = MessageBox.Show("Tem certeza que deseja excluir esse aluno?", "Confirmação", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
+            {
+                if (aluno.Excluir(idClicado) == true)
+                {
+                    MessageBox.Show("Exclusão concluida com sucesso.");
+                    dgvAlunoExcluir.DataSource = aluno.RetAluno();
+                }
+                else
+                {
+                    MessageBox.Show("Exclusão não concluída. Tente novamente.");
+                }
+            }
         }
     }
 }

@@ -10,25 +10,30 @@ using System.Windows.Forms;
 
 namespace AppProjetoControl.Menu_Secretario
 {
-    public partial class frmMenuSecretario : Form
+    public partial class frmSecretarioMenu : Form
     {
-        public frmMenuSecretario()
+        public frmSecretarioMenu()
         {
             InitializeComponent();
         }
 
         private void btnVerAluno_Click(object sender, EventArgs e)
         {
-            frmVisualizarAluno verAluno = new frmVisualizarAluno();
+            frmAlunoVisualizar verAluno = new frmAlunoVisualizar();
             this.Hide();
             verAluno.Show();
         }
 
         private void btnVerEmpresas_Click(object sender, EventArgs e)
         {
-            frmVisualizarEmpresa verEmpresa = new frmVisualizarEmpresa();
+            frmEmpresaVisualizar verEmpresa = new frmEmpresaVisualizar();
             this.Hide();
             verEmpresa.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
