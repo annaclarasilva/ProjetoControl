@@ -38,8 +38,7 @@ namespace AppProjetoControl
                 //Conectando o banco 
                 bd.Conectar();
                 //Executando o INSERT
-                bd.ExecutarComandosSql(String.Format("INSERT INTO Empresa VALUES ('{0}','{1}','{2}','{3}','{4}','{5}',{6},'{7}','{8}','{9}','{10}','{11}','{12}')", NomeFantasia, Telefone, RazaoSocial, Cnpj,Email,Responsavel,Rua,Numero,Complemento,Bairro,Estado,Cidade,Cep));
-
+                bd.ExecutarComandosSql(String.Format("INSERT INTO Empresa VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}',{7},'{8}','{9}','{10}','{11}','{12}')", NomeFantasia, Telefone, RazaoSocial, Cnpj, Email, Responsavel, Rua, Numero, Complemento, Bairro, Estado, Cidade, Cep));
                 //Desconectando o banco
                 bd.Desconectar();
                 //Se o INSERT der certo retorna true
@@ -61,7 +60,7 @@ namespace AppProjetoControl
                 //Conectando o banco 
                 bd.Conectar();
                 //Executando o UPDATE
-                bd.ExecutarComandosSql(String.Format("UPDATE Empresa SET nomeFantasia = '{0}', telefone = '{1}',email = '{2}',responsavel = '{3}', rua = '{4}',numero = '{5}',complemento = '{6}',bairro = '{7}',estado = '{8}',cidade = '{9}',cep='{10}' WHERE cnpj= '{11}'", NomeFantasia, Telefone,Email,Email,Responsavel,Rua,Numero,Complemento,Bairro,Estado,Cidade,Cep));
+                bd.ExecutarComandosSql(String.Format("UPDATE Empresa SET nomeFantasia = '{0}', telefone = '{1}',email = '{2}',responsavel = '{3}', rua = '{4}',numero = '{5}',complemento = '{6}',bairro = '{7}',estado = '{8}',cidade = '{9}',cep='{10}' WHERE cnpj= '{11}'", NomeFantasia, Telefone,Email,Responsavel,Rua,Numero,Complemento,Bairro,Estado,Cidade,Cep,cnpjEditar));
                 //Desconectando o banco
                 bd.Desconectar();
                 //Se o UPDATE der certo retorna true
@@ -122,6 +121,51 @@ namespace AppProjetoControl
             bd.Desconectar();
             //Retornando o objeto com o SELECT
             return dt;
-        }          
+        }
+
+
+
+        //Propriedade para validar o email 
+        public string EmailDigitado { get; set; }
+        //Método para validar se o email digitado já está no banco
+        public bool ValidarEmail()
+        {
+            //Conectando o banco de dados
+            bd.Conectar();
+            //Usando o objeto do DataTable para o banco receber o comando do SELECT e retornar na tabela
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Empresa WHERE email LIKE '{0}'", EmailDigitado));
+            // Desconectando o banco 
+            bd.Desconectar();
+            //Se o objeto dt não retornar nada ele não existe
+            if (dt.Rows.Count == 0)
+            {
+                //Se não existe retorna true
+                return false;
+            }
+            else //Se retornar mais de uma linha ele já existe no banco
+            {
+                //Declarando a váriavel local
+                bool teste = false;
+                //Um for para percorrer o email digitado 
+                for (int i = 0; i < EmailDigitado.Length; i++)
+                {
+                    //um if para conferir se o email possui @
+                    if (EmailDigitado[i] == char.Parse("@"))
+                    {
+                        //Se tiver o teste recebe tur
+                        teste = true;
+                    }
+                }
+                //If para conferir se o email tem mais de 5 caracteres
+                if ((EmailDigitado.Length > 5) && (teste == true))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
     }
 }

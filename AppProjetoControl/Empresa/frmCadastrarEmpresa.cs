@@ -19,11 +19,7 @@ namespace AppProjetoControl.Menu_Administrador
         }
         public bool Validar()
         {
-            if (txtRazaoSocial.ForeColor == Color.Tomato)
-            {
-                MessageBox.Show("Razão Social inválida.");
-                return false;
-            }
+        
             if (mskCnpj.ForeColor == Color.Tomato)
             {
                 MessageBox.Show("CNPJ inválido.");
@@ -92,8 +88,8 @@ namespace AppProjetoControl.Menu_Administrador
                     empresa.Telefone = telefoneSemMascara;
                     empresa.RazaoSocial = txtRazaoSocial.Text;
                     empresa.Cnpj = cnpjSemMascara;
-                    empresa.Email = txtNomeFantasia.Text;
-                    empresa.Responsavel= telefoneSemMascara;
+                    empresa.Email = txtEmail.Text;
+                    empresa.Responsavel= txtResponsavel.Text;
                     empresa.Rua = txtRua.Text;
                     empresa.Numero = int.Parse(txtNumero.Text);
                     empresa.Complemento = txtComplemento.Text;
@@ -127,10 +123,7 @@ namespace AppProjetoControl.Menu_Administrador
 
         private void mskCep_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar) && !(e.KeyChar == (char)Keys.Back) && !(e.KeyChar == (char)Keys.Space))
-            {
-                e.Handled = true;
-            }
+            
         }
 
         private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
@@ -140,5 +133,38 @@ namespace AppProjetoControl.Menu_Administrador
                 e.Handled = true;
             }
         }
+
+
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+            empresa.EmailDigitado = txtEmail.Text;
+            if (empresa.ValidarEmail() == true)
+            {
+                txtEmail.ForeColor = Color.Tomato;
+            }
+            else
+            {
+                txtEmail.ForeColor = Color.Black;
+            
+            }
+        }
+
+        private void mskCnpj_Leave(object sender, EventArgs e)
+        {
+            string cnpjSemMascara = mskCnpj.Text.Replace("/", "").Replace(".", "").Replace("-", "");
+            empresa.CnpjDigitado = cnpjSemMascara;
+            if (empresa.ValidarCnpj() == true)
+            {
+                mskCnpj.ForeColor = Color.Tomato;
+
+            }
+            else
+            {
+                mskCnpj.ForeColor = Color.Black;
+
+            }
+        }
+
+
     }
 }

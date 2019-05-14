@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvVisualizarEmpresa = new System.Windows.Forms.DataGridView();
-            this.btnVoltar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisualizarEmpresa)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +46,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(713, 80);
             this.panel1.TabIndex = 32;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
+            this.btnVoltar.FlatAppearance.BorderSize = 0;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnVoltar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnVoltar.Location = new System.Drawing.Point(0, 0);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(82, 29);
+            this.btnVoltar.TabIndex = 265;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // lblTitulo
             // 
@@ -68,22 +85,6 @@
             this.dgvVisualizarEmpresa.TabIndex = 33;
             this.dgvVisualizarEmpresa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVisualizarEmpresa_CellContentClick);
             // 
-            // btnVoltar
-            // 
-            this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
-            this.btnVoltar.FlatAppearance.BorderSize = 0;
-            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnVoltar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnVoltar.Location = new System.Drawing.Point(0, 0);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(82, 29);
-            this.btnVoltar.TabIndex = 265;
-            this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.UseVisualStyleBackColor = false;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
             // frmEmpresaVisualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -97,6 +98,7 @@
             this.Name = "frmEmpresaVisualizar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEmpresaVisualizar";
+            this.Load += new System.EventHandler(this.frmEmpresaVisualizar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisualizarEmpresa)).EndInit();

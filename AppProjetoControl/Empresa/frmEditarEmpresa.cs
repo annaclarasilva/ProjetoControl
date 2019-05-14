@@ -32,7 +32,7 @@ namespace AppProjetoControl.Menu_Administrador
                     empresa.NomeFantasia = txtNomeFantasia.Text;
                     empresa.Telefone = telefoneSemMascara;
                     empresa.RazaoSocial = txtRazaoSocial.Text;
-                    empresa.Cnpj = cnpjSemMascara;
+                   
                     empresa.Email = txtNomeFantasia.Text;
                     empresa.Responsavel = telefoneSemMascara;
                     empresa.Rua = txtRua.Text;

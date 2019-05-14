@@ -78,6 +78,7 @@
             this.txtNomeFantasia.Name = "txtNomeFantasia";
             this.txtNomeFantasia.Size = new System.Drawing.Size(381, 27);
             this.txtNomeFantasia.TabIndex = 1;
+            this.txtNomeFantasia.Text = "Empresa";
             this.txtNomeFantasia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomeFantasia_KeyPress);
             // 
             // lblTelefone
@@ -98,6 +99,7 @@
             this.mskTelefone.Name = "mskTelefone";
             this.mskTelefone.Size = new System.Drawing.Size(116, 27);
             this.mskTelefone.TabIndex = 2;
+            this.mskTelefone.Text = "3195958648";
             this.mskTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mskTelefone_KeyPress);
             // 
             // txtRazaoSocial
@@ -108,6 +110,7 @@
             this.txtRazaoSocial.Name = "txtRazaoSocial";
             this.txtRazaoSocial.Size = new System.Drawing.Size(400, 27);
             this.txtRazaoSocial.TabIndex = 3;
+            this.txtRazaoSocial.Text = "Empresa";
             this.txtRazaoSocial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRazaoSocial_KeyPress);
             // 
             // lblRazaoSocial
@@ -124,11 +127,12 @@
             // 
             this.mskCnpj.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCnpj.Location = new System.Drawing.Point(82, 203);
-            this.mskCnpj.Mask = "999\\.999\\.999/9999-99";
+            this.mskCnpj.Mask = "99\\.999\\.999/9999-99";
             this.mskCnpj.Name = "mskCnpj";
             this.mskCnpj.Size = new System.Drawing.Size(156, 27);
             this.mskCnpj.TabIndex = 5;
-            this.mskCnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mskCnpj_KeyPress);
+            this.mskCnpj.Text = "28747588000160";
+            this.mskCnpj.Leave += new System.EventHandler(this.mskCnpj_Leave);
             // 
             // lblCnpj
             // 
@@ -148,6 +152,8 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(432, 27);
             this.txtEmail.TabIndex = 6;
+            this.txtEmail.Text = "empresa@gmail.com";
+            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // lblEmail
             // 
@@ -167,6 +173,7 @@
             this.txtResponsavel.Name = "txtResponsavel";
             this.txtResponsavel.Size = new System.Drawing.Size(432, 27);
             this.txtResponsavel.TabIndex = 7;
+            this.txtResponsavel.Text = "Dono da Empresa";
             // 
             // label1
             // 
@@ -241,6 +248,7 @@
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(225, 27);
             this.txtCidade.TabIndex = 86;
+            this.txtCidade.Text = "São Paulo";
             // 
             // lblCidade
             // 
@@ -260,6 +268,7 @@
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(170, 27);
             this.txtEstado.TabIndex = 85;
+            this.txtEstado.Text = "SP";
             // 
             // lblEstado
             // 
@@ -279,6 +288,7 @@
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(225, 27);
             this.txtBairro.TabIndex = 84;
+            this.txtBairro.Text = "Vila Paranaguá";
             // 
             // lblBairro
             // 
@@ -298,6 +308,7 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(78, 27);
             this.txtNumero.TabIndex = 83;
+            this.txtNumero.Text = "129";
             this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_KeyPress);
             // 
             // lblNumero
@@ -318,6 +329,7 @@
             this.mskCep.Name = "mskCep";
             this.mskCep.Size = new System.Drawing.Size(83, 27);
             this.mskCep.TabIndex = 81;
+            this.mskCep.Text = "03806100";
             this.mskCep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mskCep_KeyPress);
             // 
             // lblCep
@@ -338,6 +350,7 @@
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(281, 27);
             this.txtRua.TabIndex = 82;
+            this.txtRua.Text = "Rua Dom Manuel O Venturoso";
             // 
             // label2
             // 

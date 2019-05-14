@@ -16,9 +16,9 @@ CREATE TABLE Empresa(
 	bairro			VARCHAR (50) NOT NULL,
 	estado			CHAR (2) NOT NULL,
 	cidade			CHAR (50) NOT NULL,
-	cep				CHAR (9) NOT NULL,
-
+	cep				CHAR (9) NOT NULL
 );
+INSERT INTO Empresa VALUES ('Empresa','3195958648','Empresa','28747588000160','empresa@gmail.com','Dono da Empresa','Rua Dom Manuel O Venturoso',129,'aaa','Vila Paranaguá','SP','São Paulo','03806100')
 
 CREATE TABLE Semestre (
 	dataInicio		DATE NOT NULL,
@@ -70,6 +70,10 @@ INSERT INTO Usuario VALUES ('michel',1,'michel12','250111760-37'),
 								('rafael',2,'rafa123','858919320-91')
 
 SELECT * FROM Usuario
+
+SELECT * FROM Empresa WHERE cnpj LIKE 28747588000160
+SELECT A.nomeAluno, A.raAluno, A.cpf,A.codTurma,E.cnpj,E.nomeFantasia FROM Aluno AS A INNER JOIN Empresa AS E ON (A.Empresa_cnpj = E.cnpj) 
+
 
 --use master
 --drop database bdProjetoControl

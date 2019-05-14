@@ -37,6 +37,7 @@
             this.btnVincularAluno = new System.Windows.Forms.Button();
             this.btnManterAluno = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnManterUsuario = new System.Windows.Forms.Button();
             this.pnlLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,7 +100,7 @@
             this.btnManterEmpresa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManterEmpresa.ForeColor = System.Drawing.Color.Black;
             this.btnManterEmpresa.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnManterEmpresa.Location = new System.Drawing.Point(229, 232);
+            this.btnManterEmpresa.Location = new System.Drawing.Point(234, 211);
             this.btnManterEmpresa.Name = "btnManterEmpresa";
             this.btnManterEmpresa.Size = new System.Drawing.Size(280, 31);
             this.btnManterEmpresa.TabIndex = 271;
@@ -114,7 +115,7 @@
             this.btnEnviarDados.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviarDados.ForeColor = System.Drawing.Color.Black;
             this.btnEnviarDados.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnEnviarDados.Location = new System.Drawing.Point(229, 269);
+            this.btnEnviarDados.Location = new System.Drawing.Point(234, 248);
             this.btnEnviarDados.Name = "btnEnviarDados";
             this.btnEnviarDados.Size = new System.Drawing.Size(280, 31);
             this.btnEnviarDados.TabIndex = 272;
@@ -129,7 +130,7 @@
             this.btnVincularAluno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVincularAluno.ForeColor = System.Drawing.Color.Black;
             this.btnVincularAluno.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnVincularAluno.Location = new System.Drawing.Point(229, 306);
+            this.btnVincularAluno.Location = new System.Drawing.Point(234, 285);
             this.btnVincularAluno.Name = "btnVincularAluno";
             this.btnVincularAluno.Size = new System.Drawing.Size(280, 31);
             this.btnVincularAluno.TabIndex = 273;
@@ -144,7 +145,7 @@
             this.btnManterAluno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManterAluno.ForeColor = System.Drawing.Color.Black;
             this.btnManterAluno.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnManterAluno.Location = new System.Drawing.Point(229, 343);
+            this.btnManterAluno.Location = new System.Drawing.Point(234, 322);
             this.btnManterAluno.Name = "btnManterAluno";
             this.btnManterAluno.Size = new System.Drawing.Size(280, 31);
             this.btnManterAluno.TabIndex = 274;
@@ -159,7 +160,7 @@
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(229, 380);
+            this.button1.Location = new System.Drawing.Point(234, 359);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(280, 31);
             this.button1.TabIndex = 275;
@@ -167,11 +168,26 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnManterUsuario
+            // 
+            this.btnManterUsuario.FlatAppearance.BorderSize = 0;
+            this.btnManterUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManterUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManterUsuario.ForeColor = System.Drawing.Color.Black;
+            this.btnManterUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnManterUsuario.Location = new System.Drawing.Point(234, 396);
+            this.btnManterUsuario.Name = "btnManterUsuario";
+            this.btnManterUsuario.Size = new System.Drawing.Size(280, 31);
+            this.btnManterUsuario.TabIndex = 276;
+            this.btnManterUsuario.Text = "Manter Usuário";
+            this.btnManterUsuario.UseVisualStyleBackColor = true;
+            // 
             // frmMenuAdm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 458);
+            this.Controls.Add(this.btnManterUsuario);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnManterAluno);
             this.Controls.Add(this.btnVincularAluno);
@@ -202,5 +218,6 @@
         private System.Windows.Forms.Button btnVincularAluno;
         private System.Windows.Forms.Button btnManterAluno;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnManterUsuario;
     }
 }

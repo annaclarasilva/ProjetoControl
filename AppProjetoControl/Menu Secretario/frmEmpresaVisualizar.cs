@@ -29,5 +29,15 @@ namespace AppProjetoControl.Menu_Secretario
             this.Hide();
             menu.Show();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frmEmpresaVisualizar_Load(object sender, EventArgs e)
+        {
+            dgvVisualizarEmpresa.DataSource = empresa.RetEmpresa();
+        }
     }
 }
