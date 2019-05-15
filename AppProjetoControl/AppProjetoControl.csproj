@@ -95,6 +95,24 @@
     <Compile Include="Empresa\frmEditarEmpresa.Designer.cs">
       <DependentUpon>frmEditarEmpresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCadastrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrarUsuario.Designer.cs">
+      <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarUsuario.Designer.cs">
+      <DependentUpon>frmEditarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExcluirUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExcluirUsuario.Designer.cs">
+      <DependentUpon>frmExcluirUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmManterUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +202,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Empresa\frmEditarEmpresa.resx">
       <DependentUpon>frmEditarEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastrarUsuario.resx">
+      <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarUsuario.resx">
+      <DependentUpon>frmEditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExcluirUsuario.resx">
+      <DependentUpon>frmExcluirUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManterUsuario.resx">
       <DependentUpon>frmManterUsuario.cs</DependentUpon>

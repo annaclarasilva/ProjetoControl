@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnCadastrarUsuario = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.btnExcluirEmpresa = new System.Windows.Forms.Button();
             this.btnEditarEmpresa = new System.Windows.Forms.Button();
             this.btnCadastrarEmpresa = new System.Windows.Forms.Button();
             this.pnlMostrar = new System.Windows.Forms.Panel();
-            this.btnCadastrarUsuario = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +44,6 @@
             this.pnlMenu.Controls.Add(this.btnCadastrarUsuario);
             this.pnlMenu.Controls.Add(this.panel1);
             this.pnlMenu.Controls.Add(this.btnVoltar);
-            this.pnlMenu.Controls.Add(this.btnExcluirEmpresa);
             this.pnlMenu.Controls.Add(this.btnEditarEmpresa);
             this.pnlMenu.Controls.Add(this.btnCadastrarEmpresa);
             this.pnlMenu.Controls.Add(this.pnlMostrar);
@@ -53,6 +51,22 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(909, 570);
             this.pnlMenu.TabIndex = 4;
+            // 
+            // btnCadastrarUsuario
+            // 
+            this.btnCadastrarUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrarUsuario.FlatAppearance.BorderSize = 0;
+            this.btnCadastrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarUsuario.ForeColor = System.Drawing.Color.Black;
+            this.btnCadastrarUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnCadastrarUsuario.Location = new System.Drawing.Point(5, 165);
+            this.btnCadastrarUsuario.Name = "btnCadastrarUsuario";
+            this.btnCadastrarUsuario.Size = new System.Drawing.Size(183, 54);
+            this.btnCadastrarUsuario.TabIndex = 270;
+            this.btnCadastrarUsuario.Text = "Cadastrar Usuário";
+            this.btnCadastrarUsuario.UseVisualStyleBackColor = false;
+            this.btnCadastrarUsuario.Click += new System.EventHandler(this.btnCadastrarUsuario_Click);
             // 
             // panel1
             // 
@@ -75,21 +89,7 @@
             this.btnVoltar.TabIndex = 268;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
-            // 
-            // btnExcluirEmpresa
-            // 
-            this.btnExcluirEmpresa.BackColor = System.Drawing.Color.Transparent;
-            this.btnExcluirEmpresa.FlatAppearance.BorderSize = 0;
-            this.btnExcluirEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluirEmpresa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluirEmpresa.ForeColor = System.Drawing.Color.Black;
-            this.btnExcluirEmpresa.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnExcluirEmpresa.Location = new System.Drawing.Point(4, 340);
-            this.btnExcluirEmpresa.Name = "btnExcluirEmpresa";
-            this.btnExcluirEmpresa.Size = new System.Drawing.Size(183, 49);
-            this.btnExcluirEmpresa.TabIndex = 265;
-            this.btnExcluirEmpresa.Text = "Ver Usuários Cadastrdaos";
-            this.btnExcluirEmpresa.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnEditarEmpresa
             // 
@@ -105,6 +105,7 @@
             this.btnEditarEmpresa.TabIndex = 264;
             this.btnEditarEmpresa.Text = "Excluir Usuario";
             this.btnEditarEmpresa.UseVisualStyleBackColor = false;
+            this.btnEditarEmpresa.Click += new System.EventHandler(this.btnEditarEmpresa_Click);
             // 
             // btnCadastrarEmpresa
             // 
@@ -120,6 +121,7 @@
             this.btnCadastrarEmpresa.TabIndex = 263;
             this.btnCadastrarEmpresa.Text = "Editar Usuário";
             this.btnCadastrarEmpresa.UseVisualStyleBackColor = false;
+            this.btnCadastrarEmpresa.Click += new System.EventHandler(this.btnCadastrarEmpresa_Click);
             // 
             // pnlMostrar
             // 
@@ -129,27 +131,12 @@
             this.pnlMostrar.Size = new System.Drawing.Size(713, 564);
             this.pnlMostrar.TabIndex = 0;
             // 
-            // btnCadastrarUsuario
-            // 
-            this.btnCadastrarUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.btnCadastrarUsuario.FlatAppearance.BorderSize = 0;
-            this.btnCadastrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarUsuario.ForeColor = System.Drawing.Color.Black;
-            this.btnCadastrarUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCadastrarUsuario.Location = new System.Drawing.Point(5, 165);
-            this.btnCadastrarUsuario.Name = "btnCadastrarUsuario";
-            this.btnCadastrarUsuario.Size = new System.Drawing.Size(183, 54);
-            this.btnCadastrarUsuario.TabIndex = 270;
-            this.btnCadastrarUsuario.Text = "Cadastrar Usuário";
-            this.btnCadastrarUsuario.UseVisualStyleBackColor = false;
-            // 
             // frmManterUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
-            this.ClientSize = new System.Drawing.Size(917, 556);
+            this.ClientSize = new System.Drawing.Size(933, 594);
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(933, 594);
@@ -167,7 +154,6 @@
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnVoltar;
-        private System.Windows.Forms.Button btnExcluirEmpresa;
         private System.Windows.Forms.Button btnEditarEmpresa;
         private System.Windows.Forms.Button btnCadastrarEmpresa;
         private System.Windows.Forms.Panel pnlMostrar;

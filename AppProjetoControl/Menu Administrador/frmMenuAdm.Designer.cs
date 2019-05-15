@@ -181,6 +181,7 @@
             this.btnManterUsuario.TabIndex = 276;
             this.btnManterUsuario.Text = "Manter Usuário";
             this.btnManterUsuario.UseVisualStyleBackColor = true;
+            this.btnManterUsuario.Click += new System.EventHandler(this.btnManterUsuario_Click);
             // 
             // frmMenuAdm
             // 

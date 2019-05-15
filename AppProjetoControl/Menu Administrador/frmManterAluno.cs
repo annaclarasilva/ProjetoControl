@@ -37,7 +37,7 @@ namespace AppProjetoControl.Menu_Administrador
 
         private void btnEditarEmpresa_Click(object sender, EventArgs e)
         {
-            AbrirFormPanel(new frmExcluirAluno());
+            AbrirFormPanel(new frmExcluirUsuario());
         }
 
         private void btnExcluirEmpresa_Click(object sender, EventArgs e)

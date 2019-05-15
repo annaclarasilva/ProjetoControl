@@ -57,5 +57,12 @@ namespace AppProjetoControl
             this.Hide();
             buscarDados.Show();
         }
+
+        private void btnManterUsuario_Click(object sender, EventArgs e)
+        {
+            frmManterUsuario manterUsuario = new frmManterUsuario();
+            this.Hide();
+            manterUsuario.Show();
+        }
     }
 }

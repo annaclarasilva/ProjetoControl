@@ -22,8 +22,8 @@ namespace AppProjetoControl
         //Criando o objeto da classe de conexão como banco de dados
         ClassConexaoBd bd = new ClassConexaoBd();
 
-        //Método para inserir Funcionário com o parametro do Código do Usuário que irá realizar o cadastro
-        public bool InserirFuncionario()
+       
+        public bool InserirUsuario()
         {
             try
             {
@@ -45,7 +45,7 @@ namespace AppProjetoControl
 
         }
 
-        //Método para editar Funcionário com o parametro do Código do Funcionário que irá ser editado
+        
         public bool Editar(string cpfUsuarioEditar)
         {
             try
@@ -147,13 +147,7 @@ namespace AppProjetoControl
             return dt;
         }
 
-        //Validando a senha
-        public bool ValidarSenha(string senha)
-        {
-            if ((senha.Where(c => char.IsLetter(c)).Count() > 0) && (senha.Where(c => char.IsNumber(c)).Count() > 0))
-                return true;
-            else return false;
-        }
+        
     }
 }
 
