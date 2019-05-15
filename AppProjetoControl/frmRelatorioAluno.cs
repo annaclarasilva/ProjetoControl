@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppProjetoControl.Menu_Secretario;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,23 +9,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AppProjetoControl.Menu_Administrador
+namespace AppProjetoControl
 {
-    public partial class frmVincularAluno : Form
+    public partial class frmRelatorioAluno : Form
     {
-        public frmVincularAluno()
+        public frmRelatorioAluno()
         {
             InitializeComponent();
         }
 
-        private void frmVincularAluno_Load(object sender, EventArgs e)
+        private void frmRelatorioAluno_Load(object sender, EventArgs e)
         {
-            this.reportViewer2.RefreshReport();
+            this.reportViewer1.RefreshReport();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            frmMenuAdm menu = new frmMenuAdm();
+            frmSecretarioMenu menu = new frmSecretarioMenu();
             this.Hide();
             menu.Show();
         }
