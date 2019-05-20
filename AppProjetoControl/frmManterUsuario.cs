@@ -36,7 +36,7 @@ namespace AppProjetoControl
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            frmSecretarioMenu menu = new frmSecretarioMenu();
+            frmMenuAdm menu = new frmMenuAdm();
             this.Hide();
             menu.Show();
         }

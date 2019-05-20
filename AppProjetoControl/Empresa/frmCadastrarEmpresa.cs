@@ -67,10 +67,7 @@ namespace AppProjetoControl.Menu_Administrador
 
         private void mskCnpj_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar) && !(e.KeyChar == (char)Keys.Back) && !(e.KeyChar == (char)Keys.Space))
-            {
-                e.Handled = true;
-            }
+            
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

@@ -65,25 +65,7 @@ namespace AppProjetoControl
             }
         }
 
-        public bool Excluir(string codExcluir)
-        {
-            try
-            {
-                //Conectando o banco 
-                bd.Conectar();
-                //Executando o DELETE
-                bd.ExecutarComandosSql(String.Format("DELETE FROM Semestre WHERE codSemestre LIKE '{0}'", codExcluir));
-                //Desconectando o banco
-                bd.Desconectar();
-                //Se o DELETE der certo retorna true
-                return true;
-            }
-            catch (Exception ex)
-            {
-                //Se o DELETE não der certo retorna uma mensagem de erro
-                throw new Exception(ex.Message + "Erro ao excluir os deste semestre. ");
-            }
-        }
+      
         //Método para retornar os dados do funcionário 
         public DataTable RetSemestre()
         {

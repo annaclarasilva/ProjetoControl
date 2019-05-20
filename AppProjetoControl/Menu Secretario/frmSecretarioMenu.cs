@@ -38,9 +38,9 @@ namespace AppProjetoControl.Menu_Secretario
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmRelatorioAluno relatorio = new frmRelatorioAluno();
-            this.Hide();
-            relatorio.Show();
+            //frmRelatorioAluno relatorio = new frmRelatorioAluno();
+            //this.Hide();
+            //relatorio.Show();
         }
     }
 }

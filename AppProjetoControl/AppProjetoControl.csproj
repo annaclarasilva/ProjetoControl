@@ -95,16 +95,6 @@
     <Compile Include="Alunos\frmVerAluno.Designer.cs">
       <DependentUpon>frmVerAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="bdProjetoControlDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>bdProjetoControlDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="bdProjetoControlDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>bdProjetoControlDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Classes\ClassAluno.cs" />
     <Compile Include="Classes\ClassConexaoBd.cs" />
     <Compile Include="Classes\ClassEmpresa.cs" />
@@ -129,6 +119,12 @@
     <Compile Include="frmCadastrarUsuario.Designer.cs">
       <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditarSemestre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarSemestre.Designer.cs">
+      <DependentUpon>frmEditarSemestre.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,17 +137,23 @@
     <Compile Include="frmExcluirUsuario.Designer.cs">
       <DependentUpon>frmExcluirUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmManterSemestre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManterSemestre.Designer.cs">
+      <DependentUpon>frmManterSemestre.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmManterUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmManterUsuario.Designer.cs">
       <DependentUpon>frmManterUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRelatorioAluno.cs">
+    <Compile Include="frmNovoSemestre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRelatorioAluno.Designer.cs">
-      <DependentUpon>frmRelatorioAluno.cs</DependentUpon>
+    <Compile Include="frmNovoSemestre.Designer.cs">
+      <DependentUpon>frmNovoSemestre.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu Administrador\frmBuscarDados.cs">
       <SubType>Form</SubType>
@@ -221,7 +223,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Alunos\frmEditarAluno.resx">
       <DependentUpon>frmEditarAluno.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,17 +241,23 @@
     <EmbeddedResource Include="frmCadastrarUsuario.resx">
       <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarSemestre.resx">
+      <DependentUpon>frmEditarSemestre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEditarUsuario.resx">
       <DependentUpon>frmEditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmExcluirUsuario.resx">
       <DependentUpon>frmExcluirUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmManterSemestre.resx">
+      <DependentUpon>frmManterSemestre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmManterUsuario.resx">
       <DependentUpon>frmManterUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRelatorioAluno.resx">
-      <DependentUpon>frmRelatorioAluno.cs</DependentUpon>
+    <EmbeddedResource Include="frmNovoSemestre.resx">
+      <DependentUpon>frmNovoSemestre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu Administrador\frmBuscarDados.resx">
       <DependentUpon>frmBuscarDados.cs</DependentUpon>
@@ -296,28 +303,6 @@
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
-    <None Include="bdProjetoControlDataSet.xsc">
-      <DependentUpon>bdProjetoControlDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="bdProjetoControlDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>bdProjetoControlDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="bdProjetoControlDataSet.xss">
-      <DependentUpon>bdProjetoControlDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="bdProjetoControlDataSet1.xsc">
-      <DependentUpon>bdProjetoControlDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="bdProjetoControlDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>bdProjetoControlDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="bdProjetoControlDataSet1.xss">
-      <DependentUpon>bdProjetoControlDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -331,21 +316,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

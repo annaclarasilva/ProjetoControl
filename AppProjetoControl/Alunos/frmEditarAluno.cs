@@ -95,5 +95,41 @@ namespace AppProjetoControl.Alunos
         {
             dgvEditarAlunos.DataSource = aluno.RetAluno();
         }
+
+        private void dgvEditarAlunos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvEditarAlunos.Rows[e.RowIndex].Cells["raAluno"].Value.ToString() != "")
+            {
+                idClicado = (dgvEditarAlunos.Rows[e.RowIndex].Cells["raAluno"].Value.ToString());
+            }
+
+            txtNome.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["nomeAluno"].Value.ToString();
+            txtIdade.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["idade"].Value.ToString();
+            txtGrau.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["grau_instrucao"].Value.ToString();
+            txtEndereco.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["rua"].Value.ToString();
+            txtNumero.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["numero"].Value.ToString();
+            txtComplemento.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["complemento"].Value.ToString();
+            txtBairro.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["bairro"].Value.ToString();
+            txtEstado.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["estado"].Value.ToString();
+            txtCidade.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["cidade"].Value.ToString();
+            mskCep.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["cep"].Value.ToString();
+            mskTelefone.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["telefone1"].Value.ToString();
+            txtId.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["identidade"].Value.ToString();
+            mskCpf.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["cpf"].Value.ToString();
+            txtEmail.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["email"].Value.ToString();
+            txtCarteira.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["carteira_de_trabalho"].Value.ToString();
+            txtNomePai.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["nomePai"].Value.ToString();
+            txtNomeMae.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["nomeMae"].Value.ToString();
+            mskTelefoneMae.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["telefoneMae"].Value.ToString();
+            mskTelefonePai.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["telefonePai"].Value.ToString();
+            txtNomeCurso.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["nomeCurso"].Value.ToString();
+            txtCodTurma.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["codTurma"].Value.ToString();
+            txtStatusAluno.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["statusAluno"].Value.ToString();
+            mskTelefoneAluno.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["telefoneAluno2"].Value.ToString();
+            txtCnpjEmpresa.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["Empresa_cnpj"].Value.ToString();
+        
+
+
+        }
     }
 }

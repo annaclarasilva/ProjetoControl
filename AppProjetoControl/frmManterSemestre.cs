@@ -1,5 +1,4 @@
-﻿using AppProjetoControl.Alunos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AppProjetoControl.Menu_Administrador
+namespace AppProjetoControl
 {
-    public partial class frmManterAluno : Form
+    public partial class frmManterSemestre : Form
     {
-        public frmManterAluno()
+        public frmManterSemestre()
         {
             InitializeComponent();
         }
@@ -30,26 +29,11 @@ namespace AppProjetoControl.Menu_Administrador
             fh.Show();
         }
 
-        private void btnCadastrarEmpresa_Click(object sender, EventArgs e)
-        {
-            AbrirFormPanel(new frmEditarAluno());
-        }
-
-        private void btnEditarEmpresa_Click(object sender, EventArgs e)
-        {
-            AbrirFormPanel(new frmExcluirAluno());
-        }
-
-        private void btnExcluirEmpresa_Click(object sender, EventArgs e)
-        {
-            AbrirFormPanel(new frmVerAluno());
-        }
-
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            frmMenuAdm menuAdm = new frmMenuAdm();
+            frmMenuAdm menu = new frmMenuAdm();
             this.Hide();
-            menuAdm.Show();
+            menu.Show();
         }
     }
 }

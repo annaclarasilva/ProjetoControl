@@ -350,7 +350,7 @@
             // mskTelefone
             // 
             this.mskTelefone.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskTelefone.Location = new System.Drawing.Point(151, 303);
+            this.mskTelefone.Location = new System.Drawing.Point(157, 303);
             this.mskTelefone.Mask = "(999) 9999-9999";
             this.mskTelefone.Name = "mskTelefone";
             this.mskTelefone.Size = new System.Drawing.Size(128, 27);
@@ -629,6 +629,7 @@
             this.dgvEditarAlunos.Name = "dgvEditarAlunos";
             this.dgvEditarAlunos.Size = new System.Drawing.Size(664, 166);
             this.dgvEditarAlunos.TabIndex = 112;
+            this.dgvEditarAlunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEditarAlunos_CellContentClick);
             // 
             // txtBusca
             // 
