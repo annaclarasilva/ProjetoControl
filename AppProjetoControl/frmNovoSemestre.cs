@@ -28,6 +28,7 @@ namespace AppProjetoControl
                 string codigo = (dt.Rows.Count > 0) ? dt.Rows[dt.Rows.Count - 1]["codSemestre"].ToString().Replace("SEM", "") : "0";
                 codigo = "SEM" + (int.Parse(codigo) + 1).ToString().PadLeft(3, '0');
                 semestre.CodSemestre = codigo;
+                semestre.NumAlunos = int.Parse(txtNumAlunos.Text);
                 if (semestre.InserirSemestre() == true)
                 {
                     MessageBox.Show("Registro concluido com sucesso.");

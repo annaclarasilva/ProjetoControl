@@ -35,5 +35,15 @@ namespace AppProjetoControl
             this.Hide();
             menu.Show();
         }
+
+        private void btnNovoSemestre_Click(object sender, EventArgs e)
+        {
+            AbrirFormPanel(new frmNovoSemestre());
+        }
+
+        private void btnCadastrarEmpresa_Click(object sender, EventArgs e)
+        {
+            AbrirFormPanel(new frmEditarSemestre());
+        }
     }
 }

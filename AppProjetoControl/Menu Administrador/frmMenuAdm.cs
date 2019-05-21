@@ -64,5 +64,12 @@ namespace AppProjetoControl
             this.Hide();
             manterUsuario.Show();
         }
+
+        private void btnManterSemestre_Click(object sender, EventArgs e)
+        {
+            frmManterSemestre semestre = new frmManterSemestre();
+            this.Hide();
+            semestre.Show();
+        }
     }
 }

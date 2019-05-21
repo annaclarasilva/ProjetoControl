@@ -38,6 +38,7 @@
             this.btnManterAluno = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnManterUsuario = new System.Windows.Forms.Button();
+            this.btnManterSemestre = new System.Windows.Forms.Button();
             this.pnlLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -183,11 +184,27 @@
             this.btnManterUsuario.UseVisualStyleBackColor = true;
             this.btnManterUsuario.Click += new System.EventHandler(this.btnManterUsuario_Click);
             // 
+            // btnManterSemestre
+            // 
+            this.btnManterSemestre.FlatAppearance.BorderSize = 0;
+            this.btnManterSemestre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManterSemestre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManterSemestre.ForeColor = System.Drawing.Color.Black;
+            this.btnManterSemestre.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnManterSemestre.Location = new System.Drawing.Point(234, 433);
+            this.btnManterSemestre.Name = "btnManterSemestre";
+            this.btnManterSemestre.Size = new System.Drawing.Size(280, 31);
+            this.btnManterSemestre.TabIndex = 277;
+            this.btnManterSemestre.Text = "Manter Semestre";
+            this.btnManterSemestre.UseVisualStyleBackColor = true;
+            this.btnManterSemestre.Click += new System.EventHandler(this.btnManterSemestre_Click);
+            // 
             // frmMenuAdm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 458);
+            this.ClientSize = new System.Drawing.Size(741, 482);
+            this.Controls.Add(this.btnManterSemestre);
             this.Controls.Add(this.btnManterUsuario);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnManterAluno);
@@ -220,5 +237,6 @@
         private System.Windows.Forms.Button btnManterAluno;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnManterUsuario;
+        private System.Windows.Forms.Button btnManterSemestre;
     }
 }

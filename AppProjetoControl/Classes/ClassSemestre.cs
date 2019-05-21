@@ -52,7 +52,7 @@ namespace AppProjetoControl
                 //Conectando o banco 
                 bd.Conectar();
                 //Executando o UPDATE
-                bd.ExecutarComandosSql(String.Format("UPDATE Empresa SET dataInicio = '{0}', dataFim = '{1}',numAlunos = '{2}' WHERE codSemestre = '{3}'", DataInicio,DataFim,NumAlunos,codEditar));
+                bd.ExecutarComandosSql(String.Format("UPDATE Semestre SET dataInicio = '{0}', dataFim = '{1}',numAlunos = '{2}' WHERE codSemestre = '{3}'", DataInicio,DataFim,NumAlunos,codEditar));
                 //Desconectando o banco
                 bd.Desconectar();
                 //Se o UPDATE der certo retorna true

@@ -351,7 +351,7 @@
             // 
             this.mskTelefone.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskTelefone.Location = new System.Drawing.Point(157, 303);
-            this.mskTelefone.Mask = "(999) 9999-9999";
+            this.mskTelefone.Mask = "(99) 99999-9999";
             this.mskTelefone.Name = "mskTelefone";
             this.mskTelefone.Size = new System.Drawing.Size(128, 27);
             this.mskTelefone.TabIndex = 14;
@@ -455,7 +455,7 @@
             // 
             this.mskTelefonePai.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskTelefonePai.Location = new System.Drawing.Point(489, 406);
-            this.mskTelefonePai.Mask = "(999) 9999-9999";
+            this.mskTelefonePai.Mask = "(99) 99999-9999";
             this.mskTelefonePai.Name = "mskTelefonePai";
             this.mskTelefonePai.Size = new System.Drawing.Size(128, 27);
             this.mskTelefonePai.TabIndex = 20;
@@ -474,7 +474,7 @@
             // 
             this.mskTelefoneMae.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskTelefoneMae.Location = new System.Drawing.Point(489, 440);
-            this.mskTelefoneMae.Mask = "(999) 9999-9999";
+            this.mskTelefoneMae.Mask = "(99) 99999-9999";
             this.mskTelefoneMae.Name = "mskTelefoneMae";
             this.mskTelefoneMae.Size = new System.Drawing.Size(128, 27);
             this.mskTelefoneMae.TabIndex = 22;
@@ -569,7 +569,7 @@
             // 
             this.mskTelefoneAluno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskTelefoneAluno.Location = new System.Drawing.Point(104, 571);
-            this.mskTelefoneAluno.Mask = "(999) 9999-9999";
+            this.mskTelefoneAluno.Mask = "(99) 99999-9999";
             this.mskTelefoneAluno.Name = "mskTelefoneAluno";
             this.mskTelefoneAluno.Size = new System.Drawing.Size(128, 27);
             this.mskTelefoneAluno.TabIndex = 106;
@@ -636,11 +636,11 @@
             this.txtBusca.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBusca.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusca.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtBusca.Location = new System.Drawing.Point(491, 664);
+            this.txtBusca.Location = new System.Drawing.Point(466, 664);
             this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(196, 27);
+            this.txtBusca.Size = new System.Drawing.Size(221, 27);
             this.txtBusca.TabIndex = 113;
-            this.txtBusca.Text = "Busque o aluno pelo...";
+            this.txtBusca.Text = "Busque o aluno pelo RA";
             this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);
             // 
             // frmEditarAluno

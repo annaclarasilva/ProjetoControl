@@ -79,7 +79,11 @@ select * from Aluno
 INSERT INTO Usuario VALUES ('michel',1,'michel12','250111760-37'),
 ('rafael',2,'rafa123','858919320-91')
 SELECT * FROM Usuario
+select * from Empresa
+select * from Semestre
 
+
+SELECT nomeFantasia AS 'Nome Fantasia',telefone AS 'Telefone' FROM Empresa 
 --GO
 --CREATE VIEW vwAlunosEmpregados AS
 --SELECT A.nomeAluno, A.raAluno, A.cpf,A.codTurma,E.cnpj,E.nomeFantasia

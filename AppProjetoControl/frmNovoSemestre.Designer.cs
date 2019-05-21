@@ -85,7 +85,7 @@
             // 
             this.txtNumAlunos.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNumAlunos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumAlunos.Location = new System.Drawing.Point(208, 109);
+            this.txtNumAlunos.Location = new System.Drawing.Point(211, 109);
             this.txtNumAlunos.Name = "txtNumAlunos";
             this.txtNumAlunos.Size = new System.Drawing.Size(105, 27);
             this.txtNumAlunos.TabIndex = 27;
@@ -94,7 +94,7 @@
             // 
             this.lblNumAlunos.AutoSize = true;
             this.lblNumAlunos.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumAlunos.Location = new System.Drawing.Point(20, 111);
+            this.lblNumAlunos.Location = new System.Drawing.Point(23, 111);
             this.lblNumAlunos.Name = "lblNumAlunos";
             this.lblNumAlunos.Size = new System.Drawing.Size(184, 23);
             this.lblNumAlunos.TabIndex = 26;

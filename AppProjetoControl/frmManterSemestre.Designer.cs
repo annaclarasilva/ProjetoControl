@@ -64,6 +64,7 @@
             this.btnNovoSemestre.TabIndex = 270;
             this.btnNovoSemestre.Text = "Gerar Novo Semestre";
             this.btnNovoSemestre.UseVisualStyleBackColor = false;
+            this.btnNovoSemestre.Click += new System.EventHandler(this.btnNovoSemestre_Click);
             // 
             // panel1
             // 
@@ -102,6 +103,7 @@
             this.btnCadastrarEmpresa.TabIndex = 263;
             this.btnCadastrarEmpresa.Text = "Editar Semestre";
             this.btnCadastrarEmpresa.UseVisualStyleBackColor = false;
+            this.btnCadastrarEmpresa.Click += new System.EventHandler(this.btnCadastrarEmpresa_Click);
             // 
             // pnlMostrar
             // 
