@@ -113,46 +113,46 @@
     <Compile Include="Empresa\frmEditarEmpresa.Designer.cs">
       <DependentUpon>frmEditarEmpresa.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastrarUsuario.cs">
+    <Compile Include="Menu Administrador\frmCadastrarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastrarUsuario.Designer.cs">
+    <Compile Include="Menu Administrador\frmCadastrarUsuario.Designer.cs">
       <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditarSemestre.cs">
+    <Compile Include="Menu Administrador\frmEditarSemestre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditarSemestre.Designer.cs">
+    <Compile Include="Menu Administrador\frmEditarSemestre.Designer.cs">
       <DependentUpon>frmEditarSemestre.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditarUsuario.cs">
+    <Compile Include="Menu Administrador\frmEditarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditarUsuario.Designer.cs">
+    <Compile Include="Menu Administrador\frmEditarUsuario.Designer.cs">
       <DependentUpon>frmEditarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmExcluirUsuario.cs">
+    <Compile Include="Menu Administrador\frmExcluirUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmExcluirUsuario.Designer.cs">
+    <Compile Include="Menu Administrador\frmExcluirUsuario.Designer.cs">
       <DependentUpon>frmExcluirUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManterSemestre.cs">
+    <Compile Include="Menu Administrador\frmManterSemestre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManterSemestre.Designer.cs">
+    <Compile Include="Menu Administrador\frmManterSemestre.Designer.cs">
       <DependentUpon>frmManterSemestre.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManterUsuario.cs">
+    <Compile Include="Menu Administrador\frmManterUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManterUsuario.Designer.cs">
+    <Compile Include="Menu Administrador\frmManterUsuario.Designer.cs">
       <DependentUpon>frmManterUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNovoSemestre.cs">
+    <Compile Include="Menu Administrador\frmNovoSemestre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNovoSemestre.Designer.cs">
+    <Compile Include="Menu Administrador\frmNovoSemestre.Designer.cs">
       <DependentUpon>frmNovoSemestre.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu Administrador\frmBuscarDados.cs">
@@ -238,25 +238,25 @@
     <EmbeddedResource Include="Empresa\frmEditarEmpresa.resx">
       <DependentUpon>frmEditarEmpresa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastrarUsuario.resx">
+    <EmbeddedResource Include="Menu Administrador\frmCadastrarUsuario.resx">
       <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditarSemestre.resx">
+    <EmbeddedResource Include="Menu Administrador\frmEditarSemestre.resx">
       <DependentUpon>frmEditarSemestre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditarUsuario.resx">
+    <EmbeddedResource Include="Menu Administrador\frmEditarUsuario.resx">
       <DependentUpon>frmEditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmExcluirUsuario.resx">
+    <EmbeddedResource Include="Menu Administrador\frmExcluirUsuario.resx">
       <DependentUpon>frmExcluirUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManterSemestre.resx">
+    <EmbeddedResource Include="Menu Administrador\frmManterSemestre.resx">
       <DependentUpon>frmManterSemestre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManterUsuario.resx">
+    <EmbeddedResource Include="Menu Administrador\frmManterUsuario.resx">
       <DependentUpon>frmManterUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNovoSemestre.resx">
+    <EmbeddedResource Include="Menu Administrador\frmNovoSemestre.resx">
       <DependentUpon>frmNovoSemestre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu Administrador\frmBuscarDados.resx">

@@ -70,7 +70,7 @@
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(689, 28);
             this.txtBusca.TabIndex = 55;
-            this.txtBusca.Text = "Busque o aluno pelo CPF; Número da Carteira de Identidade ou pelo RA";
+            this.txtBusca.Text = "Busque o aluno pelo RA";
             this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
             this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);
             // 

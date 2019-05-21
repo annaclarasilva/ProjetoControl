@@ -124,5 +124,10 @@ namespace AppProjetoControl.Alunos
 
 
         }
+
+        private void txtBusca_TextChanged(object sender, EventArgs e)
+        {
+            dgvEditarAlunos.DataSource = aluno.RetAlunoBusca(txtBusca.Text);
+        }
     }
 }

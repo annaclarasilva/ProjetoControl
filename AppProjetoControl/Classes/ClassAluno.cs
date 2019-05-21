@@ -118,7 +118,7 @@ namespace AppProjetoControl
             //Conectando com o banco 
             bd.Conectar();
             //Usando o objeto do DataTable para o banco receber o comando do SELECT e retornar na tabela
-            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Aluno"));
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Aluno "));
             //Desconectando o banco
             bd.Desconectar();
             //Retornando o objeto do DataTable 
@@ -207,7 +207,7 @@ namespace AppProjetoControl
             //Conectando com o banco 
             bd.Conectar();
 
-            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Aluno WHERE cpf LIKE '%{0}%' OR raAluno = '%{0}%' OR identidade = '%{0}%' ", busca));
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Aluno WHERE raAluno LIKE '%{0}%'", busca));
             //Desconectando com o banco
             bd.Desconectar();
             //Retornando o objeto com o SELECT
