@@ -33,7 +33,7 @@ namespace AppProjetoControl.Menu_Administrador
 
         private void txtBusca_TextChanged(object sender, EventArgs e)
         {
-            dgvBuscarDados.DataSource = aluno.RetAluno();
+            dgvBuscarDados.DataSource = aluno.RetAlunoBusca(txtBusca.Text);
         }
 
         private void frmBuscarDados_Load(object sender, EventArgs e)

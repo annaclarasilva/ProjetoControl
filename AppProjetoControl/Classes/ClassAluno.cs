@@ -204,7 +204,8 @@ namespace AppProjetoControl
         //Método para retornar um aluno por busca
         public DataTable RetAlunoBusca(string busca)
         {
-            //Conectando com o banco 
+            //Conectando com o banco ,
+
             bd.Conectar();
 
             DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Aluno WHERE raAluno LIKE '%{0}%'", busca));
@@ -214,7 +215,15 @@ namespace AppProjetoControl
             return dt;
         }
 
-     
+        public DataTable verificarRA(string ra)
+        {
+            bd.Conectar();
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Aluno WHERE raAluno LIKE '{0}'", ra));
+            bd.Desconectar();
+            return dt;
+        }
+
+
     }
 }
 

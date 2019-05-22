@@ -13,7 +13,7 @@ namespace AppProjetoControl
         {
             InitializeComponent();
         }
-        
+
         private void btnFechar_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
@@ -35,7 +35,7 @@ namespace AppProjetoControl
 
         public object ExcelReaderFactory { get; private set; }
         string arquivoExcel = @"C:\Users\Aluno\Downloads\excel\Consulta alunos matriculados 07-02-2019 (2).xlsx";
-        
+
         private void CarregaDadosExcel()
         {
             try
@@ -53,9 +53,9 @@ namespace AppProjetoControl
 
                 string[] listaNomeColunas = dt.Columns.OfType<DataColumn>().Select(x => x.ColumnName).ToArray();
 
-            
 
-               
+
+
             }
             catch (Exception ex)
             {
@@ -119,7 +119,7 @@ namespace AppProjetoControl
             return dt;
         }
 
-       
+
 
         ClassAluno aluno = new ClassAluno();
         private void btnExibirTodos_Click(object sender, EventArgs e)

@@ -93,7 +93,7 @@ namespace AppProjetoControl
             //Conectando com o banco 
             bd.Conectar();
             //Usando o objeto do DataTable para o banco receber o comando do SELECT e retornar na tabela
-            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Usuario"));
+            DataTable dt = bd.RetDataTable(String.Format("SELECT usuario AS 'Usuário',tipoFunc AS 'Tipo de Funcionário',senha AS 'Senha',cpf AS 'CPF' FROM Usuario "));
             //Desconectando o banco
             bd.Desconectar();
             //Retornando o objeto do DataTable 
@@ -108,7 +108,7 @@ namespace AppProjetoControl
             //Conectando o banco de dados
             bd.Conectar();
             //Usando o objeto do DataTable para o banco receber o comando do SELECT e retornar na tabela
-            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Usuario WHERE cpf LIKE '{0}'", CpfDigitado));
+            DataTable dt = bd.RetDataTable(String.Format("SELECT usuario AS 'Usuário',tipoFunc AS 'Tipo de Funcionário',senha AS 'Senha',cpf AS 'CPF' FROM Usuario  WHERE cpf LIKE '{0}'", CpfDigitado));
             // Desconectando o banco 
             bd.Desconectar();
             //Se o objeto dt não retornar nada ele não existe
