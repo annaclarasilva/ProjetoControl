@@ -76,7 +76,7 @@ namespace AppProjetoControl.Menu_Administrador
             string cnpjSemMascara = mskCnpj.Text.Replace("/", "").Replace(".", "").Replace("-", "");
             string cepSemMascara = mskCep.Text.Replace("-", "");
 
-            if ((txtNomeFantasia.Text != "") && (mskTelefone.Text != "") && (txtRazaoSocial.Text != "") && (mskCnpj.Text != "") && (txtEmail.Text != "") && (txtResponsavel.Text != "") && (txtRua.Text != "") && (txtNumero.Text != "") && (txtComplemento.Text != "") && (txtBairro.Text != "") && (txtEstado.Text != "") && (txtCidade.Text != "") && (mskCep.Text != ""))
+            if ((txtNomeFantasia.Text != "") && (mskTelefone.Text != "") && (txtRazaoSocial.Text != "") && (mskCnpj.Text != "") && (txtEmail.Text != "") && (txtResponsavel.Text != "") && (txtRua.Text != "") && (txtNumero.Text != "") && (txtComplemento.Text != "") && (txtBairro.Text != "") && (txtEstado.Text != "") && (txtCidade.Text != "") && (mskCep.Text != "") && (txtQuantContratos.Text != ""))
             {
 
                 if (Validar() == true)
@@ -94,6 +94,12 @@ namespace AppProjetoControl.Menu_Administrador
                     empresa.Estado = txtEstado.Text;
                     empresa.Cidade = txtCidade.Text;
                     empresa.Cep = cepSemMascara;
+                    empresa.NumMenorAprendiz = int.Parse(txtQuantContratos.Text!= "" ?txtQuantContratos.Text: "0");
+                    empresa.NumFaseEscolar = int.Parse(txtFaseEscolar.Text!=""?txtFaseEscolar.Text:"0");
+                    empresa.NumPraticaSequencial = int.Parse(txtPraticaSequencial.Text != "" ? txtPraticaSequencial.Text : "0");
+                    empresa.NumConcomitante = int.Parse(txtConcomitante.Text != "" ? txtConcomitante.Text : "0");
+                    empresa.NumSequencial = int.Parse(txtSequencial.Text != "" ? txtSequencial.Text : "0");
+                    empresa.NumDual = int.Parse(txtDual.Text != "" ? txtDual.Text : "0");
                     DataTable dt = empresa.RetEmpresa();
 
                     if (empresa.InserirEmpresa() == true)
@@ -162,6 +168,9 @@ namespace AppProjetoControl.Menu_Administrador
             }
         }
 
+        private void frmCadastrarEmpresa_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

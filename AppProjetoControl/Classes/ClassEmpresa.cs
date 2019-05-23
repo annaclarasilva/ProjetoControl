@@ -25,7 +25,12 @@ namespace AppProjetoControl
         public string Estado { get; set; }
         public string Cidade { get; set; }
         public string Cep { get; set; }
-
+        public int NumMenorAprendiz { get; set; }
+        public int NumFaseEscolar { get; set; }
+        public int NumPraticaSequencial { get; set; }
+        public int NumConcomitante { get; set; }
+        public int NumSequencial { get; set; }
+        public int NumDual { get; set; }
 
         //Criando o objeto da classe de conexão como banco de dados
         ClassConexaoBd bd = new ClassConexaoBd();
@@ -38,7 +43,7 @@ namespace AppProjetoControl
                 //Conectando o banco 
                 bd.Conectar();
                 //Executando o INSERT
-                bd.ExecutarComandosSql(String.Format("INSERT INTO Empresa VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}',{7},'{8}','{9}','{10}','{11}','{12}')", NomeFantasia, Telefone, RazaoSocial, Cnpj, Email, Responsavel, Rua, Numero, Complemento, Bairro, Estado, Cidade, Cep));
+                bd.ExecutarComandosSql(String.Format("INSERT INTO Empresa (nomeFantasia,telefone,razaoSocial,cnpj,email,responsavel,rua,numero,complemento,bairro,estado,cidade,cep,numMenorAprendiz,numFaseEscolar,numPraticaSequencial,numConcomitante,numSequencial,numDual) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}',{7},'{8}','{9}','{10}','{11}','{12}',{13},{14},{15},{16},{17},{18})", NomeFantasia, Telefone, RazaoSocial, Cnpj, Email, Responsavel, Rua, Numero, Complemento, Bairro, Estado, Cidade, Cep,NumMenorAprendiz,NumFaseEscolar,NumPraticaSequencial,NumConcomitante,NumSequencial,NumDual));
                 //Desconectando o banco
                 bd.Desconectar();
                 //Se o INSERT der certo retorna true
@@ -60,7 +65,7 @@ namespace AppProjetoControl
                 //Conectando o banco 
                 bd.Conectar();
                 //Executando o UPDATE
-                bd.ExecutarComandosSql(String.Format("UPDATE Empresa SET nomeFantasia = '{0}', telefone = '{1}',email = '{2}',responsavel = '{3}', rua = '{4}',numero = '{5}',complemento = '{6}',bairro = '{7}',estado = '{8}',cidade = '{9}',cep='{10}' WHERE cnpj= '{11}'", NomeFantasia, Telefone,Email,Responsavel,Rua,Numero,Complemento,Bairro,Estado,Cidade,Cep,cnpjEditar));
+                bd.ExecutarComandosSql(String.Format("UPDATE Empresa SET nomeFantasia = '{0}', telefone = '{1}',email = '{2}',responsavel = '{3}', rua = '{4}',numero = '{5}',complemento = '{6}',bairro = '{7}',estado = '{8}',cidade = '{9}',cep='{10}',numMenorAprendiz = {11},numFaseEscolar = {12}, numPraticaSequencial = {13}, numConcomitante = {14}, numSequencial = {15}, numDual = {16} WHERE cnpj= '{17}'", NomeFantasia, Telefone,Email,Responsavel,Rua,Numero,Complemento,Bairro,Estado,Cidade,Cep,NumMenorAprendiz,NumFaseEscolar,NumPraticaSequencial,NumConcomitante,NumSequencial,NumDual,cnpjEditar));
                 //Desconectando o banco
                 bd.Desconectar();
                 //Se o UPDATE der certo retorna true
@@ -80,7 +85,7 @@ namespace AppProjetoControl
             //Conectando com o banco 
             bd.Conectar();
             //Usando o objeto do DataTable para o banco receber o comando do SELECT e retornar na tabela
-            DataTable dt = bd.RetDataTable(String.Format("SELECT nomeFantasia AS 'Nome Fantasia',telefone AS 'Telefone',razaoSocial AS 'Razão Social',cnpj AS 'CNPJ', email AS 'Email',responsavel AS 'Responsável', rua AS 'Rua',numero AS 'Nº', complemento AS 'Complemento',bairro AS 'Bairro', estado AS 'Estado',cidade AS 'Cidade', cep AS 'CEP'  FROM Empresa "));
+            DataTable dt = bd.RetDataTable(String.Format("SELECT nomeFantasia AS 'Nome Fantasia',telefone AS 'Telefone',razaoSocial AS 'Razão Social',cnpj AS 'CNPJ', email AS 'Email',responsavel AS 'Responsável', rua AS 'Rua',numero AS 'Nº', complemento AS 'Complemento',bairro AS 'Bairro', estado AS 'Estado',cidade AS 'Cidade', cep AS 'CEP',numMenorAprendiz AS 'Quantidade de Menores Aprendiz', numPraticaSequencial AS 'Quantidade de Contrato Prática Sequencial', numConcomitante AS 'Quantidade de Contrato Concomitante', numSequencial AS 'Quantidade de Contrato Sequencial', numDual AS 'Quantidade de Contrato Dual', numFaseEscolar AS 'Quantidade de Contrato Fase Escolar'  FROM Empresa "));
             //Desconectando o banco
             bd.Desconectar();
             //Retornando o objeto do DataTable 
@@ -116,7 +121,7 @@ namespace AppProjetoControl
             //Conectando com o banco 
             bd.Conectar();
             
-            DataTable dt = bd.RetDataTable(String.Format("SELECT nomeFantasia AS 'Nome Fantasia',telefone AS 'Telefone',razaoSocial AS 'Razão Social',cnpj AS 'CNPJ', email AS 'Email',responsavel AS 'Responsável', rua AS 'Rua',numero AS 'Nº', complemento AS 'Complemento',bairro AS 'Bairro', estado AS 'Estado',cidade AS 'Cidade', cep AS 'CEP'  FROM Empresa  WHERE nomeFantasia LIKE '%{0}%' OR cnpj LIKE '%{0}%' ", busca));
+            DataTable dt = bd.RetDataTable(String.Format("SELECT nomeFantasia AS 'Nome Fantasia',telefone AS 'Telefone',razaoSocial AS 'Razão Social',cnpj AS 'CNPJ', email AS 'Email',responsavel AS 'Responsável', rua AS 'Rua',numero AS 'Nº', complemento AS 'Complemento',bairro AS 'Bairro', estado AS 'Estado',cidade AS 'Cidade', cep AS 'CEP',numMenorAprendiz AS 'Quantidade de Menores Aprendiz', numPraticaSequencial AS 'Quantidade de Contrato Prática Sequencial', numConcomitante AS 'Quantidade de Contrato Concomitante', numSequencial AS 'Quantidade de Contrato Sequencial', numDual AS 'Quantidade de Contrato Dual', numFaseEscolar AS 'Quantidade de Contrato Fase Escolar'  FROM Empresa  WHERE nomeFantasia LIKE '%{0}%' OR cnpj LIKE '%{0}%' ", busca));
             //Desconectando com o banco
             bd.Desconectar();
             //Retornando o objeto com o SELECT

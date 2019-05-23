@@ -42,6 +42,12 @@ namespace AppProjetoControl.Menu_Administrador
                     empresa.Estado = txtEstado.Text;
                     empresa.Cidade = txtCidade.Text;
                     empresa.Cep = cepSemMascara;
+                    empresa.NumMenorAprendiz = int.Parse(txtQuantContratos.Text != "" ? txtQuantContratos.Text : "0");
+                    empresa.NumFaseEscolar = int.Parse(txtFaseEscolar.Text != "" ? txtFaseEscolar.Text : "0");
+                    empresa.NumPraticaSequencial = int.Parse(txtPraticaSequencial.Text != "" ? txtPraticaSequencial.Text : "0");
+                    empresa.NumConcomitante = int.Parse(txtConcomitante.Text != "" ? txtConcomitante.Text : "0");
+                    empresa.NumSequencial = int.Parse(txtSequencial.Text != "" ? txtSequencial.Text : "0");
+                    empresa.NumDual = int.Parse(txtDual.Text != "" ? txtDual.Text : "0");
 
                     if (empresa.Editar(idClicado) == true)
                     {
@@ -84,6 +90,12 @@ namespace AppProjetoControl.Menu_Administrador
             txtEstado.Text = dgvEditarEmpresa.Rows[e.RowIndex].Cells["estado"].Value.ToString();
             txtCidade.Text = dgvEditarEmpresa.Rows[e.RowIndex].Cells["cidade"].Value.ToString();
             mskCep.Text = dgvEditarEmpresa.Rows[e.RowIndex].Cells["cep"].Value.ToString();
+            txtQuantContratos.Text = dgvEditarEmpresa.Rows[e.RowIndex].Cells["numMenorAprendiz"].Value.ToString();
+            txtFaseEscolar.Text = dgvEditarEmpresa.Rows[e.RowIndex].Cells["numFaseEscolar"].Value.ToString();
+            txtPraticaSequencial.Text = dgvEditarEmpresa.Rows[e.RowIndex].Cells["numPraticaSequencial"].Value.ToString();
+            txtConcomitante.Text = dgvEditarEmpresa.Rows[e.RowIndex].Cells["numConcomitante"].Value.ToString();
+            txtSequencial.Text = dgvEditarEmpresa.Rows[e.RowIndex].Cells["numSequencial"].Value.ToString();
+            txtDual.Text = dgvEditarEmpresa.Rows[e.RowIndex].Cells["numDual"].Value.ToString();
         }
 
         private void txtBusca_TextChanged(object sender, EventArgs e)

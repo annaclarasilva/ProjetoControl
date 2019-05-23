@@ -15,9 +15,16 @@ CREATE TABLE Empresa(
 	bairro			VARCHAR (50) NOT NULL,
 	estado			CHAR (2) NOT NULL,
 	cidade			CHAR (50) NOT NULL,
-	cep				CHAR (9) NOT NULL
+	cep				CHAR (9) NOT NULL,
+	numMenorAprendiz INT NULL,
+	numFaseEscolar INT NULL,
+	numPraticaSequencial INT NULL,
+	numConcomitante INT NULL,
+	numSequencial INT NULL,
+	numDual INT NULL,
+
 );
-INSERT INTO Empresa VALUES ('Empresa','3195958648','Empresa','28747588000160','empresa@gmail.com','Dono da Empresa','Rua Dom Manuel O Venturoso',129,'aaa','Vila Paranaguá','SP','São Paulo','03806100')
+INSERT INTO Empresa (nomeFantasia,telefone,razaoSocial,cnpj,email,responsavel,rua,numero,complemento,bairro,estado,cidade,cep,numMenorAprendiz,numFaseEscolar,numPraticaSequencial,numConcomitante,numSequencial,numDual) VALUES ('Empresa','3195958648','Empresa','28747588000160','empresa@gmail.com','Dono da Empresa','Rua Dom Manuel O Venturoso',129,'aaa','Vila Paranaguá','SP','São Paulo','03806100',50,0,25,25,0,0)
 
 CREATE TABLE Semestre (
 	dataInicio		DATE NOT NULL,
@@ -85,7 +92,7 @@ select * from Semestre
 select * from Aluno
 SELECT * FROM Aluno WHERE raAluno LIKE '%1%'
 
-SELECT nomeFantasia AS 'Nome Fantasia',telefone AS 'Telefone',razaoSocial AS 'Razão Social',cnpj AS 'CNPJ', email AS 'Email',responsavel AS 'Responsável', rua AS 'Rua',numero AS 'Nº', complemento AS 'Complemento',bairro AS 'Bairro', estado AS 'Estado',cidade AS 'Cidade', cep AS 'CEP'  FROM Empresa 
+SELECT nomeFantasia AS 'Nome Fantasia',telefone AS 'Telefone',razaoSocial AS 'Razão Social',cnpj AS 'CNPJ', email AS 'Email',responsavel AS 'Responsável', rua AS 'Rua',numero AS 'Nº', complemento AS 'Complemento',bairro AS 'Bairro', estado AS 'Estado',cidade AS 'Cidade', cep AS 'CEP',numMenorAprendiz AS 'Quantidade de Menores Aprendiz', numPraticaSequencial AS 'Quantidade de Contrato Prática Sequencial', numConcomitante AS 'Quantidade de Contrato Concomitante', numSequencial AS 'Quantidade de Contrato Sequencial', numDual AS 'Quantidade de Contrato Dual', numFaseEscolar AS 'Quantidade de Contrato Fase Escolar'  FROM Empresa 
 SELECT usuario AS 'Usuário',tipoFunc AS 'Tipo de Funcionário',senha AS 'Senha',cpf AS 'CPF' FROM Usuario 
 SELECT dataInicio AS 'Data Inicio',dataFim AS 'Data Fim',codSemestre AS 'Código do Semestre',numAlunos AS 'Número de Alunos' FROM Semestre
 SELECT raAluno AS 'RA do Aluno',nomeAluno AS 'Nome do Aluno',idade AS 'Idade',sexo AS 'Sexo', grau_instrucao AS 'Grau de Instrução',rua AS 'Rua', numero AS 'Número',complemento AS 'Complemento', bairro AS 'Bairro', estado AS 'Estado',cidade AS 'Cidade', cep AS 'CEP',telefone1 AS 'Telefone (Residência) do Aluno',identidade AS 'Identidade do Aluno',cpf AS 'CPF', email AS 'E-mail',carteira_de_trabalho AS 'Carteira de Trabalho', nomePai AS 'Nome do Pai',telefonePai AS 'Telefone do Pai', nomeMae AS 'Nome da Mãe', nomeCurso AS 'Nome do Curso',codTurma AS 'Código da Turma', telefoneAluno2 AS 'Telefone (Celular) do Aluno',Empresa_cnpj AS 'CNPJ da Empresa', Semestre_codSemestre AS 'Código do Semestre' FROM Aluno 

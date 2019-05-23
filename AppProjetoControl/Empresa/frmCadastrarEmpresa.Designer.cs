@@ -51,12 +51,24 @@
             this.lblEstado = new System.Windows.Forms.Label();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.lblBairro = new System.Windows.Forms.Label();
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.lblNumero = new System.Windows.Forms.Label();
             this.mskCep = new System.Windows.Forms.MaskedTextBox();
             this.lblCep = new System.Windows.Forms.Label();
             this.txtRua = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtPraticaSequencial = new System.Windows.Forms.TextBox();
+            this.lblPraticaSequencial = new System.Windows.Forms.Label();
+            this.txtConcomitante = new System.Windows.Forms.TextBox();
+            this.lblConcomitante = new System.Windows.Forms.Label();
+            this.txtFaseEscolar = new System.Windows.Forms.TextBox();
+            this.lblFaseEscolar = new System.Windows.Forms.Label();
+            this.txtSequencial = new System.Windows.Forms.TextBox();
+            this.lblSequencial = new System.Windows.Forms.Label();
+            this.txtDual = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.lblNumero = new System.Windows.Forms.Label();
+            this.txtQuantContratos = new System.Windows.Forms.TextBox();
+            this.lblContrato = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -213,7 +225,7 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.Black;
-            this.btnSalvar.Location = new System.Drawing.Point(569, 520);
+            this.btnSalvar.Location = new System.Drawing.Point(556, 621);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(132, 32);
             this.btnSalvar.TabIndex = 8;
@@ -264,9 +276,9 @@
             // 
             this.txtEstado.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEstado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstado.Location = new System.Drawing.Point(411, 339);
+            this.txtEstado.Location = new System.Drawing.Point(410, 347);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(170, 27);
+            this.txtEstado.Size = new System.Drawing.Size(97, 27);
             this.txtEstado.TabIndex = 85;
             this.txtEstado.Text = "SP";
             // 
@@ -274,7 +286,7 @@
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(331, 347);
+            this.lblEstado.Location = new System.Drawing.Point(331, 351);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(77, 23);
             this.lblEstado.TabIndex = 92;
@@ -294,32 +306,11 @@
             // 
             this.lblBairro.AutoSize = true;
             this.lblBairro.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBairro.Location = new System.Drawing.Point(14, 347);
+            this.lblBairro.Location = new System.Drawing.Point(8, 347);
             this.lblBairro.Name = "lblBairro";
             this.lblBairro.Size = new System.Drawing.Size(68, 23);
             this.lblBairro.TabIndex = 91;
             this.lblBairro.Text = "Bairro:";
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNumero.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(55, 415);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(78, 27);
-            this.txtNumero.TabIndex = 83;
-            this.txtNumero.Text = "129";
-            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_KeyPress);
-            // 
-            // lblNumero
-            // 
-            this.lblNumero.AutoSize = true;
-            this.lblNumero.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumero.Location = new System.Drawing.Point(12, 420);
-            this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(37, 23);
-            this.lblNumero.TabIndex = 90;
-            this.lblNumero.Text = "N°:";
             // 
             // mskCep
             // 
@@ -346,9 +337,9 @@
             // 
             this.txtRua.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRua.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRua.Location = new System.Drawing.Point(127, 453);
+            this.txtRua.Location = new System.Drawing.Point(313, 312);
             this.txtRua.Name = "txtRua";
-            this.txtRua.Size = new System.Drawing.Size(281, 27);
+            this.txtRua.Size = new System.Drawing.Size(334, 27);
             this.txtRua.TabIndex = 82;
             this.txtRua.Text = "Rua Dom Manuel O Venturoso";
             // 
@@ -356,17 +347,166 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 457);
+            this.label2.Location = new System.Drawing.Point(210, 313);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 23);
             this.label2.TabIndex = 88;
             this.label2.Text = "Endereço:";
             // 
+            // txtPraticaSequencial
+            // 
+            this.txtPraticaSequencial.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPraticaSequencial.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPraticaSequencial.Location = new System.Drawing.Point(205, 459);
+            this.txtPraticaSequencial.Name = "txtPraticaSequencial";
+            this.txtPraticaSequencial.Size = new System.Drawing.Size(137, 27);
+            this.txtPraticaSequencial.TabIndex = 95;
+            // 
+            // lblPraticaSequencial
+            // 
+            this.lblPraticaSequencial.AutoSize = true;
+            this.lblPraticaSequencial.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPraticaSequencial.Location = new System.Drawing.Point(16, 460);
+            this.lblPraticaSequencial.Name = "lblPraticaSequencial";
+            this.lblPraticaSequencial.Size = new System.Drawing.Size(190, 23);
+            this.lblPraticaSequencial.TabIndex = 96;
+            this.lblPraticaSequencial.Text = "Prática Sequencial:";
+            // 
+            // txtConcomitante
+            // 
+            this.txtConcomitante.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConcomitante.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConcomitante.Location = new System.Drawing.Point(165, 500);
+            this.txtConcomitante.Name = "txtConcomitante";
+            this.txtConcomitante.Size = new System.Drawing.Size(137, 27);
+            this.txtConcomitante.TabIndex = 97;
+            // 
+            // lblConcomitante
+            // 
+            this.lblConcomitante.AutoSize = true;
+            this.lblConcomitante.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConcomitante.Location = new System.Drawing.Point(16, 500);
+            this.lblConcomitante.Name = "lblConcomitante";
+            this.lblConcomitante.Size = new System.Drawing.Size(148, 23);
+            this.lblConcomitante.TabIndex = 98;
+            this.lblConcomitante.Text = "Concomitante:";
+            // 
+            // txtFaseEscolar
+            // 
+            this.txtFaseEscolar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFaseEscolar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFaseEscolar.Location = new System.Drawing.Point(145, 536);
+            this.txtFaseEscolar.Name = "txtFaseEscolar";
+            this.txtFaseEscolar.Size = new System.Drawing.Size(137, 27);
+            this.txtFaseEscolar.TabIndex = 99;
+            // 
+            // lblFaseEscolar
+            // 
+            this.lblFaseEscolar.AutoSize = true;
+            this.lblFaseEscolar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFaseEscolar.Location = new System.Drawing.Point(16, 537);
+            this.lblFaseEscolar.Name = "lblFaseEscolar";
+            this.lblFaseEscolar.Size = new System.Drawing.Size(128, 23);
+            this.lblFaseEscolar.TabIndex = 100;
+            this.lblFaseEscolar.Text = "Fase Escolar:";
+            // 
+            // txtSequencial
+            // 
+            this.txtSequencial.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSequencial.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSequencial.Location = new System.Drawing.Point(136, 575);
+            this.txtSequencial.Name = "txtSequencial";
+            this.txtSequencial.Size = new System.Drawing.Size(137, 27);
+            this.txtSequencial.TabIndex = 101;
+            // 
+            // lblSequencial
+            // 
+            this.lblSequencial.AutoSize = true;
+            this.lblSequencial.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSequencial.Location = new System.Drawing.Point(16, 575);
+            this.lblSequencial.Name = "lblSequencial";
+            this.lblSequencial.Size = new System.Drawing.Size(119, 23);
+            this.lblSequencial.TabIndex = 102;
+            this.lblSequencial.Text = "Sequencial:";
+            // 
+            // txtDual
+            // 
+            this.txtDual.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDual.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDual.Location = new System.Drawing.Point(78, 608);
+            this.txtDual.Name = "txtDual";
+            this.txtDual.Size = new System.Drawing.Size(137, 27);
+            this.txtDual.TabIndex = 103;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(19, 609);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 23);
+            this.label6.TabIndex = 104;
+            this.label6.Text = "Dual:";
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNumero.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumero.Location = new System.Drawing.Point(589, 345);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(78, 27);
+            this.txtNumero.TabIndex = 105;
+            this.txtNumero.Text = "129";
+            // 
+            // lblNumero
+            // 
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumero.Location = new System.Drawing.Point(551, 346);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(37, 23);
+            this.lblNumero.TabIndex = 106;
+            this.lblNumero.Text = "N°:";
+            // 
+            // txtQuantContratos
+            // 
+            this.txtQuantContratos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQuantContratos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantContratos.Location = new System.Drawing.Point(269, 424);
+            this.txtQuantContratos.Name = "txtQuantContratos";
+            this.txtQuantContratos.Size = new System.Drawing.Size(137, 27);
+            this.txtQuantContratos.TabIndex = 107;
+            // 
+            // lblContrato
+            // 
+            this.lblContrato.AutoSize = true;
+            this.lblContrato.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContrato.Location = new System.Drawing.Point(16, 425);
+            this.lblContrato.Name = "lblContrato";
+            this.lblContrato.Size = new System.Drawing.Size(252, 23);
+            this.lblContrato.TabIndex = 108;
+            this.lblContrato.Text = "Quantidade de Contratos:";
+            // 
             // frmCadastrarEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 564);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(713, 665);
+            this.Controls.Add(this.txtQuantContratos);
+            this.Controls.Add(this.lblContrato);
+            this.Controls.Add(this.txtNumero);
+            this.Controls.Add(this.lblNumero);
+            this.Controls.Add(this.txtDual);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtSequencial);
+            this.Controls.Add(this.lblSequencial);
+            this.Controls.Add(this.txtFaseEscolar);
+            this.Controls.Add(this.lblFaseEscolar);
+            this.Controls.Add(this.txtConcomitante);
+            this.Controls.Add(this.lblConcomitante);
+            this.Controls.Add(this.txtPraticaSequencial);
+            this.Controls.Add(this.lblPraticaSequencial);
             this.Controls.Add(this.txtComplemento);
             this.Controls.Add(this.lblComplemento);
             this.Controls.Add(this.txtCidade);
@@ -375,8 +515,6 @@
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.lblBairro);
-            this.Controls.Add(this.txtNumero);
-            this.Controls.Add(this.lblNumero);
             this.Controls.Add(this.mskCep);
             this.Controls.Add(this.lblCep);
             this.Controls.Add(this.txtRua);
@@ -397,11 +535,10 @@
             this.Controls.Add(this.lblNomeFantasia);
             this.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(713, 564);
-            this.MinimumSize = new System.Drawing.Size(713, 564);
             this.Name = "frmCadastrarEmpresa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadastrarEmpresa";
+            this.Load += new System.EventHandler(this.frmCadastrarEmpresa_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -434,11 +571,23 @@
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.Label lblBairro;
-        private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.MaskedTextBox mskCep;
         private System.Windows.Forms.Label lblCep;
         private System.Windows.Forms.TextBox txtRua;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtPraticaSequencial;
+        private System.Windows.Forms.Label lblPraticaSequencial;
+        private System.Windows.Forms.TextBox txtConcomitante;
+        private System.Windows.Forms.Label lblConcomitante;
+        private System.Windows.Forms.TextBox txtFaseEscolar;
+        private System.Windows.Forms.Label lblFaseEscolar;
+        private System.Windows.Forms.TextBox txtSequencial;
+        private System.Windows.Forms.Label lblSequencial;
+        private System.Windows.Forms.TextBox txtDual;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.Label lblNumero;
+        private System.Windows.Forms.TextBox txtQuantContratos;
+        private System.Windows.Forms.Label lblContrato;
     }
 }
