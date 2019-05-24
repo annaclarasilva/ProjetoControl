@@ -79,7 +79,6 @@
             this.lblStatusAluno = new System.Windows.Forms.Label();
             this.mskTelefoneAluno = new System.Windows.Forms.MaskedTextBox();
             this.lblTelefoneAluno = new System.Windows.Forms.Label();
-            this.txtCnpjEmpresa = new System.Windows.Forms.TextBox();
             this.lblCnpj = new System.Windows.Forms.Label();
             this.txtCodSemestre = new System.Windows.Forms.TextBox();
             this.lblCodigoSemestre = new System.Windows.Forms.Label();
@@ -87,6 +86,7 @@
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cboContrato = new System.Windows.Forms.ComboBox();
+            this.mskCnpj = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditarAlunos)).BeginInit();
             this.SuspendLayout();
@@ -586,15 +586,6 @@
             this.lblTelefoneAluno.TabIndex = 107;
             this.lblTelefoneAluno.Text = "Telefone:";
             // 
-            // txtCnpjEmpresa
-            // 
-            this.txtCnpjEmpresa.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCnpjEmpresa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCnpjEmpresa.Location = new System.Drawing.Point(172, 601);
-            this.txtCnpjEmpresa.Name = "txtCnpjEmpresa";
-            this.txtCnpjEmpresa.Size = new System.Drawing.Size(196, 27);
-            this.txtCnpjEmpresa.TabIndex = 108;
-            // 
             // lblCnpj
             // 
             this.lblCnpj.AutoSize = true;
@@ -609,10 +600,11 @@
             // 
             this.txtCodSemestre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCodSemestre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodSemestre.Location = new System.Drawing.Point(193, 634);
+            this.txtCodSemestre.Location = new System.Drawing.Point(189, 638);
             this.txtCodSemestre.Name = "txtCodSemestre";
             this.txtCodSemestre.Size = new System.Drawing.Size(196, 27);
             this.txtCodSemestre.TabIndex = 110;
+            this.txtCodSemestre.Leave += new System.EventHandler(this.txtCodSemestre_Leave);
             // 
             // lblCodigoSemestre
             // 
@@ -671,19 +663,29 @@
             this.cboContrato.Size = new System.Drawing.Size(245, 29);
             this.cboContrato.TabIndex = 114;
             // 
+            // mskCnpj
+            // 
+            this.mskCnpj.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCnpj.Location = new System.Drawing.Point(172, 605);
+            this.mskCnpj.Mask = "99\\.999\\.999/9999-99";
+            this.mskCnpj.Name = "mskCnpj";
+            this.mskCnpj.Size = new System.Drawing.Size(156, 27);
+            this.mskCnpj.TabIndex = 116;
+            this.mskCnpj.Text = "28747588000160";
+            // 
             // frmEditarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(706, 920);
+            this.Controls.Add(this.mskCnpj);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboContrato);
             this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.dgvEditarAlunos);
             this.Controls.Add(this.txtCodSemestre);
             this.Controls.Add(this.lblCodigoSemestre);
-            this.Controls.Add(this.txtCnpjEmpresa);
             this.Controls.Add(this.lblCnpj);
             this.Controls.Add(this.mskTelefoneAluno);
             this.Controls.Add(this.lblTelefoneAluno);
@@ -801,7 +803,6 @@
         private System.Windows.Forms.Label lblStatusAluno;
         private System.Windows.Forms.MaskedTextBox mskTelefoneAluno;
         private System.Windows.Forms.Label lblTelefoneAluno;
-        private System.Windows.Forms.TextBox txtCnpjEmpresa;
         private System.Windows.Forms.Label lblCnpj;
         private System.Windows.Forms.TextBox txtCodSemestre;
         private System.Windows.Forms.Label lblCodigoSemestre;
@@ -809,5 +810,6 @@
         private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboContrato;
+        private System.Windows.Forms.MaskedTextBox mskCnpj;
     }
 }

@@ -92,5 +92,27 @@ namespace AppProjetoControl
             return dt;
         }
 
+        public string CodDigitado { get; set; }
+        public bool ValidarCodSemestre()
+        {
+            //Conectando o banco de dados
+            bd.Conectar();
+            //Usando o objeto do DataTable para o banco receber o comando do SELECT e retornar na tabela
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Semestre WHERE codSemestre LIKE '{0}'", CodDigitado));
+            // Desconectando o banco 
+            bd.Desconectar();
+            //Se o objeto dt não retornar nada ele não existe
+            if (dt.Rows.Count == 0)
+            {
+                //Se não existe retorna true
+                return false;
+            } //Se retornar mais de uma linha ele já existe no banco
+            else
+            {
+                //Se existe 
+                return true;
+            }
+        }
+
     }
 }

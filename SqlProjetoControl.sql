@@ -97,12 +97,12 @@ SELECT usuario AS 'Usuário',tipoFunc AS 'Tipo de Funcionário',senha AS 'Senha',c
 SELECT dataInicio AS 'Data Inicio',dataFim AS 'Data Fim',codSemestre AS 'Código do Semestre' FROM Semestre 
 SELECT raAluno AS 'RA do Aluno',nomeAluno AS 'Nome do Aluno',idade AS 'Idade',sexo AS 'Sexo', grau_instrucao AS 'Grau de Instrução',rua AS 'Rua', numero AS 'Número',complemento AS 'Complemento', bairro AS 'Bairro', estado AS 'Estado',cidade AS 'Cidade', cep AS 'CEP',telefone1 AS 'Telefone (Residência) do Aluno',identidade AS 'Identidade do Aluno',cpf AS 'CPF', email AS 'E-mail',carteira_de_trabalho AS 'Carteira de Trabalho', nomePai AS 'Nome do Pai',telefonePai AS 'Telefone do Pai', nomeMae AS 'Nome da Mãe', nomeCurso AS 'Nome do Curso',codTurma AS 'Código da Turma', telefoneAluno2 AS 'Telefone (Celular) do Aluno',Empresa_cnpj AS 'CNPJ da Empresa', Semestre_codSemestre AS 'Código do Semestre', tipoContrato AS 'Contrato' FROM Aluno 
 
---GO
---CREATE VIEW vwAlunosEmpregados AS
---SELECT A.nomeAluno, A.raAluno, A.cpf,A.codTurma,E.cnpj,E.nomeFantasia
---FROM Aluno AS A INNER JOIN Empresa AS E ON (A.Empresa_cnpj = E.cnpj) 
---SELECT * FROM vwAlunosEmpregados
---GO
+GO
+CREATE VIEW vwAlunosEmpregados AS
+SELECT A.nomeAluno, A.raAluno, A.cpf,A.codTurma,E.cnpj,E.nomeFantasia
+FROM Aluno AS A INNER JOIN Empresa AS E ON (A.Empresa_cnpj = E.cnpj) WHERE A.Semestre_codSemestre LIKE 'SEM001'
+SELECT * FROM vwAlunosEmpregados
+GO
 
 
 

@@ -32,49 +32,57 @@ namespace AppProjetoControl.Alunos
             string telefonePaiSemMascara = mskTelefonePai.Text.Replace("-", "").Replace("(", "").Replace(")", "").Replace(" ", "");
             string telefoneAlunoSemMascara = mskTelefoneAluno.Text.Replace("/", "").Replace(".", "").Replace("-", "");
             string cpfSemMascara = mskCpf.Text.Replace(".", "").Replace("-", "");
-
-            if ((txtBusca.Text != "") && (txtCnpjEmpresa.Text !="") && (txtCodSemestre.Text != "") && (cboContrato.Text !=""))
+            string cnpjSemMascara = mskCnpj.Text.Replace("/", "").Replace(".", "").Replace("-", "");
+            if (Validar() == true)
             {
-                aluno.NomeAluno = txtNome.Text;
-                aluno.Sexo = cboSexo.Text;
-                aluno.Idade = int.Parse(txtIdade.Text);
-                aluno.Grau_instrucao = txtGrau.Text;
-                aluno.Cep = cepSemMascara;
-                aluno.Rua = txtEndereco.Text;
-                aluno.Numero = int.Parse(txtNumero.Text);
-                aluno.Bairro = txtBairro.Text;
-                aluno.Cidade = txtCidade.Text;
-                aluno.Estado = txtEstado.Text;
-                aluno.Cidade = txtCidade.Text;
-                aluno.Telefone1 = mskTelefone.Text;
-                aluno.Identidade = txtId.Text;
-                aluno.Cpf = cpfSemMascara;
-                aluno.Email = txtEmail.Text;
-                aluno.Carteira_de_trabalho = txtCarteira.Text;
-                aluno.NomePai = txtNomePai.Text;
-                aluno.NomeMae = txtNomeMae.Text;
-                aluno.TelefonePai = telefonePaiSemMascara;
-                aluno.TelefoneMae = telefoneMaeSemMascara;
-                aluno.NomeCurso = txtNomeCurso.Text;
-                aluno.CodTurma = txtCodTurma.Text;
-                aluno.StatusAluno = txtStatusAluno.Text;
-                aluno.TelefoneAluno2 = mskTelefoneAluno.Text;
-                aluno.Empresa_cnpj = txtCnpjEmpresa.Text;
-                aluno.Semestre_codSemestre = txtCodSemestre.Text;
-                aluno.TipoContrato = cboContrato.Text;
-
-                if (aluno.Editar(idClicado) == true)
+                if ((txtBusca.Text != "") && (cnpjSemMascara != "") && (txtCodSemestre.Text != "") && (cboContrato.Text != ""))
                 {
-                    MessageBox.Show("Edição concluida com sucesso.");
-                    dgvEditarAlunos.DataSource = aluno.RetAluno();
-                }
-                else
-                {
-                    MessageBox.Show("Edição não concluída tente novamente.");
-                }
+                    aluno.NomeAluno = txtNome.Text;
+                    aluno.Sexo = cboSexo.Text;
+                    aluno.Idade = int.Parse(txtIdade.Text);
+                    aluno.Grau_instrucao = txtGrau.Text;
+                    aluno.Cep = cepSemMascara;
+                    aluno.Rua = txtEndereco.Text;
+                    aluno.Numero = int.Parse(txtNumero.Text);
+                    aluno.Bairro = txtBairro.Text;
+                    aluno.Cidade = txtCidade.Text;
+                    aluno.Estado = txtEstado.Text;
+                    aluno.Cidade = txtCidade.Text;
+                    aluno.Telefone1 = mskTelefone.Text;
+                    aluno.Identidade = txtId.Text;
+                    aluno.Cpf = cpfSemMascara;
+                    aluno.Email = txtEmail.Text;
+                    aluno.Carteira_de_trabalho = txtCarteira.Text;
+                    aluno.NomePai = txtNomePai.Text;
+                    aluno.NomeMae = txtNomeMae.Text;
+                    aluno.TelefonePai = telefonePaiSemMascara;
+                    aluno.TelefoneMae = telefoneMaeSemMascara;
+                    aluno.NomeCurso = txtNomeCurso.Text;
+                    aluno.CodTurma = txtCodTurma.Text;
+                    aluno.StatusAluno = txtStatusAluno.Text;
+                    aluno.TelefoneAluno2 = mskTelefoneAluno.Text;
+                    aluno.Empresa_cnpj = cnpjSemMascara;
+                    aluno.Semestre_codSemestre = txtCodSemestre.Text;
+                    aluno.TipoContrato = cboContrato.Text;
 
-
+                    if (aluno.Editar(idClicado) == true)
+                    {
+                        MessageBox.Show("Edição concluida com sucesso.");
+                        dgvEditarAlunos.DataSource = aluno.RetAluno();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Edição não concluída tente novamente.");
+                    }
+                }
             }
+            else
+            {
+                MessageBox.Show("Edição não concluída tente novamente.");
+            }
+
+
+
         }
 
         private void txtBusca_Enter(object sender, EventArgs e)
@@ -118,7 +126,7 @@ namespace AppProjetoControl.Alunos
             txtCodTurma.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["codTurma"].Value.ToString();
             txtStatusAluno.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["statusAluno"].Value.ToString();
             mskTelefoneAluno.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["telefoneAluno2"].Value.ToString();
-            txtCnpjEmpresa.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["Empresa_cnpj"].Value.ToString();
+            mskCnpj.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["Empresa_cnpj"].Value.ToString();
             cboSexo.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["sexo"].Value.ToString();
             txtCodSemestre.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["Semestre_codSemestre"].Value.ToString();
 
@@ -130,5 +138,55 @@ namespace AppProjetoControl.Alunos
         {
             dgvEditarAlunos.DataSource = aluno.RetAlunoBusca(txtBusca.Text);
         }
+
+        public bool Validar()
+        {
+
+            if (txtCodSemestre.ForeColor == Color.Tomato)
+            {
+                MessageBox.Show("Código do Semestre inexistente. Tente novamente!");
+                return false;
+            }
+            if (mskCnpj.ForeColor == Color.Tomato)
+            {
+                MessageBox.Show("CNPJ inexistente. Tente novamente!");
+                return false;
+            }
+
+            return true;
+        }
+
+        ClassSemestre semestre = new ClassSemestre();
+        private void txtCodSemestre_Leave(object sender, EventArgs e)
+        {
+            semestre.CodDigitado = txtCodSemestre.Text;
+            if (semestre.ValidarCodSemestre() == false)
+            {
+                txtCodSemestre.ForeColor = Color.Black;
+            }
+            else
+            {
+                txtCodSemestre.ForeColor = Color.Tomato;
+
+            }
+        }
+
+        ClassEmpresa empresa = new ClassEmpresa();
+        private void txtCnpjEmpresa_Leave(object sender, EventArgs e)
+        {
+            string cnpjSemMascara = mskCnpj.Text.Replace("/", "").Replace(".", "").Replace("-", "");
+            empresa.CnpjDigitado = cnpjSemMascara;
+            if (empresa.ValidarCnpj() == false)
+            {
+                mskCnpj.ForeColor = Color.Black;
+
+            }
+            else
+            {
+                mskCnpj.ForeColor = Color.Tomato;
+
+            }
+        }
     }
+
 }

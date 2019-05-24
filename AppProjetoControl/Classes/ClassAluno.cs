@@ -209,7 +209,7 @@ namespace AppProjetoControl
 
             bd.Conectar();
 
-            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Aluno  WHERE raAluno LIKE '%{0}%'", busca));
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Aluno  WHERE raAluno LIKE '%{0}%' OR tipoContrato LIKE '%{0}%'" , busca));
             //Desconectando com o banco
             bd.Desconectar();
             //Retornando o objeto com o SELECT
@@ -224,7 +224,7 @@ namespace AppProjetoControl
             return dt;
         }
 
-
+        
     }
 }
 
