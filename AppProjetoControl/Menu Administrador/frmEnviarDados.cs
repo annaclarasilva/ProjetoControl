@@ -34,7 +34,7 @@ namespace AppProjetoControl
         }
 
         public object ExcelReaderFactory { get; private set; }
-        string arquivoExcel = @"C:\Users\Aluno\Downloads\excel\Consulta alunos matriculados 07-02-2019 (2).xlsx";
+      //  string arquivoExcel = @"C:\Users\Aluno\Downloads\excel\Consulta alunos matriculados 07-02-2019 (2).xlsx";
 
         private void CarregaDadosExcel()
         {
@@ -42,7 +42,7 @@ namespace AppProjetoControl
             {
 
                 //converte os dados do Excel para um DataTable
-                DataTable dt = GetTabelaExcel(arquivoExcel);
+                DataTable dt = GetTabelaExcel(txtArquivoExcel.Text);
 
                 //ajusta a largura das colunas aos dados
                 dgvDados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -65,6 +65,7 @@ namespace AppProjetoControl
 
         private DataTable GetTabelaExcel(string arquivoExcel)
         {
+            arquivoExcel = txtArquivoExcel.Text;
             DataTable dt = new DataTable();
             try
             {
@@ -129,6 +130,7 @@ namespace AppProjetoControl
 
         private void btnImportaExcel_Click(object sender, EventArgs e)
         {
+            string arquivoExcel;
             if (!string.IsNullOrEmpty(txtArquivoExcel.Text) && File.Exists(txtArquivoExcel.Text))
             {
                 arquivoExcel = txtArquivoExcel.Text;
