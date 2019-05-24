@@ -32,8 +32,6 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.mskDataInicio = new System.Windows.Forms.MaskedTextBox();
             this.lblDataInicio = new System.Windows.Forms.Label();
-            this.txtNumAlunos = new System.Windows.Forms.TextBox();
-            this.lblNumAlunos = new System.Windows.Forms.Label();
             this.mskDataFim = new System.Windows.Forms.MaskedTextBox();
             this.lblDataFim = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -65,7 +63,7 @@
             // mskDataInicio
             // 
             this.mskDataInicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskDataInicio.Location = new System.Drawing.Point(290, 155);
+            this.mskDataInicio.Location = new System.Drawing.Point(290, 109);
             this.mskDataInicio.Mask = "99/99/9999";
             this.mskDataInicio.Name = "mskDataInicio";
             this.mskDataInicio.Size = new System.Drawing.Size(100, 27);
@@ -75,35 +73,16 @@
             // 
             this.lblDataInicio.AutoSize = true;
             this.lblDataInicio.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataInicio.Location = new System.Drawing.Point(25, 156);
+            this.lblDataInicio.Location = new System.Drawing.Point(25, 110);
             this.lblDataInicio.Name = "lblDataInicio";
             this.lblDataInicio.Size = new System.Drawing.Size(259, 23);
             this.lblDataInicio.TabIndex = 30;
             this.lblDataInicio.Text = "Data do Início do Semestre";
             // 
-            // txtNumAlunos
-            // 
-            this.txtNumAlunos.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNumAlunos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumAlunos.Location = new System.Drawing.Point(211, 109);
-            this.txtNumAlunos.Name = "txtNumAlunos";
-            this.txtNumAlunos.Size = new System.Drawing.Size(105, 27);
-            this.txtNumAlunos.TabIndex = 27;
-            // 
-            // lblNumAlunos
-            // 
-            this.lblNumAlunos.AutoSize = true;
-            this.lblNumAlunos.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumAlunos.Location = new System.Drawing.Point(23, 111);
-            this.lblNumAlunos.Name = "lblNumAlunos";
-            this.lblNumAlunos.Size = new System.Drawing.Size(184, 23);
-            this.lblNumAlunos.TabIndex = 26;
-            this.lblNumAlunos.Text = "Número de Alunos:";
-            // 
             // mskDataFim
             // 
             this.mskDataFim.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskDataFim.Location = new System.Drawing.Point(290, 196);
+            this.mskDataFim.Location = new System.Drawing.Point(290, 150);
             this.mskDataFim.Mask = "99/99/9999";
             this.mskDataFim.Name = "mskDataFim";
             this.mskDataFim.Size = new System.Drawing.Size(100, 27);
@@ -113,7 +92,7 @@
             // 
             this.lblDataFim.AutoSize = true;
             this.lblDataFim.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataFim.Location = new System.Drawing.Point(25, 197);
+            this.lblDataFim.Location = new System.Drawing.Point(25, 151);
             this.lblDataFim.Name = "lblDataFim";
             this.lblDataFim.Size = new System.Drawing.Size(252, 23);
             this.lblDataFim.TabIndex = 33;
@@ -143,8 +122,6 @@
             this.Controls.Add(this.lblDataFim);
             this.Controls.Add(this.mskDataInicio);
             this.Controls.Add(this.lblDataInicio);
-            this.Controls.Add(this.txtNumAlunos);
-            this.Controls.Add(this.lblNumAlunos);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmNovoSemestre";
@@ -163,8 +140,6 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.MaskedTextBox mskDataInicio;
         private System.Windows.Forms.Label lblDataInicio;
-        private System.Windows.Forms.TextBox txtNumAlunos;
-        private System.Windows.Forms.Label lblNumAlunos;
         private System.Windows.Forms.MaskedTextBox mskDataFim;
         private System.Windows.Forms.Label lblDataFim;
         private System.Windows.Forms.Button btnSalvar;

@@ -85,6 +85,8 @@
             this.lblCodigoSemestre = new System.Windows.Forms.Label();
             this.dgvEditarAlunos = new System.Windows.Forms.DataGridView();
             this.txtBusca = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboContrato = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditarAlunos)).BeginInit();
             this.SuspendLayout();
@@ -552,7 +554,7 @@
             this.txtStatusAluno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStatusAluno.Location = new System.Drawing.Point(151, 541);
             this.txtStatusAluno.Name = "txtStatusAluno";
-            this.txtStatusAluno.Size = new System.Drawing.Size(503, 27);
+            this.txtStatusAluno.Size = new System.Drawing.Size(284, 27);
             this.txtStatusAluno.TabIndex = 104;
             // 
             // lblStatusAluno
@@ -644,12 +646,39 @@
             this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
             this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(363, 579);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 19);
+            this.label1.TabIndex = 115;
+            this.label1.Text = "Contrato:";
+            // 
+            // cboContrato
+            // 
+            this.cboContrato.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboContrato.FormattingEnabled = true;
+            this.cboContrato.Items.AddRange(new object[] {
+            "Fase Escolar",
+            "Prática Sequencial ",
+            "Concomitante ",
+            "Sequencial ",
+            "Dual "});
+            this.cboContrato.Location = new System.Drawing.Point(442, 573);
+            this.cboContrato.Name = "cboContrato";
+            this.cboContrato.Size = new System.Drawing.Size(245, 29);
+            this.cboContrato.TabIndex = 114;
+            // 
             // frmEditarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(706, 920);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cboContrato);
             this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.dgvEditarAlunos);
             this.Controls.Add(this.txtCodSemestre);
@@ -778,5 +807,7 @@
         private System.Windows.Forms.Label lblCodigoSemestre;
         private System.Windows.Forms.DataGridView dgvEditarAlunos;
         private System.Windows.Forms.TextBox txtBusca;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cboContrato;
     }
 }

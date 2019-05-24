@@ -85,7 +85,7 @@ namespace AppProjetoControl
             //Conectando com o banco 
             bd.Conectar();
             //Usando o objeto do DataTable para o banco receber o comando do SELECT e retornar na tabela
-            DataTable dt = bd.RetDataTable(String.Format("SELECT nomeFantasia AS 'Nome Fantasia',telefone AS 'Telefone',razaoSocial AS 'Razão Social',cnpj AS 'CNPJ', email AS 'Email',responsavel AS 'Responsável', rua AS 'Rua',numero AS 'Nº', complemento AS 'Complemento',bairro AS 'Bairro', estado AS 'Estado',cidade AS 'Cidade', cep AS 'CEP',numMenorAprendiz AS 'Quantidade de Menores Aprendiz', numPraticaSequencial AS 'Quantidade de Contrato Prática Sequencial', numConcomitante AS 'Quantidade de Contrato Concomitante', numSequencial AS 'Quantidade de Contrato Sequencial', numDual AS 'Quantidade de Contrato Dual', numFaseEscolar AS 'Quantidade de Contrato Fase Escolar'  FROM Empresa "));
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Empresa "));
             //Desconectando o banco
             bd.Desconectar();
             //Retornando o objeto do DataTable 
@@ -121,7 +121,7 @@ namespace AppProjetoControl
             //Conectando com o banco 
             bd.Conectar();
             
-            DataTable dt = bd.RetDataTable(String.Format("SELECT nomeFantasia AS 'Nome Fantasia',telefone AS 'Telefone',razaoSocial AS 'Razão Social',cnpj AS 'CNPJ', email AS 'Email',responsavel AS 'Responsável', rua AS 'Rua',numero AS 'Nº', complemento AS 'Complemento',bairro AS 'Bairro', estado AS 'Estado',cidade AS 'Cidade', cep AS 'CEP',numMenorAprendiz AS 'Quantidade de Menores Aprendiz', numPraticaSequencial AS 'Quantidade de Contrato Prática Sequencial', numConcomitante AS 'Quantidade de Contrato Concomitante', numSequencial AS 'Quantidade de Contrato Sequencial', numDual AS 'Quantidade de Contrato Dual', numFaseEscolar AS 'Quantidade de Contrato Fase Escolar'  FROM Empresa  WHERE nomeFantasia LIKE '%{0}%' OR cnpj LIKE '%{0}%' ", busca));
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Empresa  WHERE nomeFantasia LIKE '%{0}%' OR cnpj LIKE '%{0}%' ", busca));
             //Desconectando com o banco
             bd.Desconectar();
             //Retornando o objeto com o SELECT

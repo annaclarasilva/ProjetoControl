@@ -77,6 +77,7 @@ namespace AppProjetoControl.Menu_Administrador
                 idClicado = (dgvEditarEmpresa.Rows[e.RowIndex].Cells["cnpj"].Value.ToString());
             }
 
+            //txtNomeFantasia.Text = dgvEditarEmpresa.Rows[e.RowIndex].Cells["nomeFantasia"].Value.ToString();
             txtNomeFantasia.Text = dgvEditarEmpresa.Rows[e.RowIndex].Cells["nomeFantasia"].Value.ToString();
             mskTelefone.Text = dgvEditarEmpresa.Rows[e.RowIndex].Cells["telefone"].Value.ToString();
             txtRazaoSocial.Text = dgvEditarEmpresa.Rows[e.RowIndex].Cells["razaoSocial"].Value.ToString();

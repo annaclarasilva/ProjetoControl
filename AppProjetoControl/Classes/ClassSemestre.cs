@@ -16,7 +16,7 @@ namespace AppProjetoControl
         public string DataInicio { get; set; }
         public string DataFim { get; set; }
         public string CodSemestre { get; set; }
-        public int NumAlunos { get; set; }
+       
 
 
         //Criando o objeto da classe de conexão como banco de dados
@@ -29,7 +29,7 @@ namespace AppProjetoControl
                 //Conectando o banco 
                 bd.Conectar();
                 //Executando o INSERT
-                bd.ExecutarComandosSql(String.Format("INSERT INTO Semestre VALUES ('{0}','{1}','{2}',{3})", DataInicio,DataFim,CodSemestre,NumAlunos));
+                bd.ExecutarComandosSql(String.Format("INSERT INTO Semestre VALUES ('{0}','{1}','{2}')", DataInicio,DataFim,CodSemestre));
 
                 //Desconectando o banco
                 bd.Desconectar();
@@ -52,7 +52,7 @@ namespace AppProjetoControl
                 //Conectando o banco 
                 bd.Conectar();
                 //Executando o UPDATE
-                bd.ExecutarComandosSql(String.Format("UPDATE Semestre SET dataInicio = '{0}', dataFim = '{1}',numAlunos = '{2}' WHERE codSemestre = '{3}'", DataInicio,DataFim,NumAlunos,codEditar));
+                bd.ExecutarComandosSql(String.Format("UPDATE Semestre SET dataInicio = '{0}', dataFim = '{1}' WHERE codSemestre = '{2}'", DataInicio,DataFim,codEditar));
                 //Desconectando o banco
                 bd.Desconectar();
                 //Se o UPDATE der certo retorna true
@@ -72,7 +72,7 @@ namespace AppProjetoControl
             //Conectando com o banco 
             bd.Conectar();
             //Usando o objeto do DataTable para o banco receber o comando do SELECT e retornar na tabela
-            DataTable dt = bd.RetDataTable(String.Format("SELECT dataInicio AS 'Data Inicio',dataFim AS 'Data Fim',codSemestre AS 'Código do Semestre',numAlunos AS 'Número de Alunos' FROM Semestre"));
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Semestre"));
             //Desconectando o banco
             bd.Desconectar();
             //Retornando o objeto do DataTable 
@@ -85,7 +85,7 @@ namespace AppProjetoControl
             //Conectando com o banco 
             bd.Conectar();
 
-            DataTable dt = bd.RetDataTable(String.Format("SELECT dataInicio AS 'Data Inicio',dataFim AS 'Data Fim',codSemestre AS 'Código do Semestre',numAlunos AS 'Número de Alunos' FROM Semestre WHERE codSemestre LIKE '%{0}%' ", busca));
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Semestre WHERE codSemestre LIKE '%{0}%' ", busca));
             //Desconectando com o banco
             bd.Desconectar();
             //Retornando o objeto com o SELECT

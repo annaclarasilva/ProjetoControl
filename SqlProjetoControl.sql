@@ -25,12 +25,11 @@ CREATE TABLE Empresa(
 
 );
 INSERT INTO Empresa (nomeFantasia,telefone,razaoSocial,cnpj,email,responsavel,rua,numero,complemento,bairro,estado,cidade,cep,numMenorAprendiz,numFaseEscolar,numPraticaSequencial,numConcomitante,numSequencial,numDual) VALUES ('Empresa','3195958648','Empresa','28747588000160','empresa@gmail.com','Dono da Empresa','Rua Dom Manuel O Venturoso',129,'aaa','Vila Paranaguá','SP','São Paulo','03806100',50,0,25,25,0,0)
-
+select * from Empresa
 CREATE TABLE Semestre (
 	dataInicio		DATE NOT NULL,
 	dataFim			DATE NOT NULL,
 	codSemestre		VARCHAR (20) PRIMARY KEY NOT NULL,
-	numAlunos		INT NOT  NULL,
 );
 
 CREATE TABLE Aluno(
@@ -61,6 +60,7 @@ CREATE TABLE Aluno(
 	statusAluno		VARCHAR (100) ,
 	telefoneAluno2	VARCHAR (100) ,
 	Empresa_cnpj	VARCHAR (100) ,
+	tipoContrato	VARCHAR (100),
 	FOREIGN KEY (Empresa_cnpj) REFERENCES Empresa (cnpj),
 	Semestre_codSemestre VARCHAR (20) ,
 	FOREIGN KEY (Semestre_codSemestre) REFERENCES Semestre (codSemestre),
@@ -94,8 +94,8 @@ SELECT * FROM Aluno WHERE raAluno LIKE '%1%'
 
 SELECT nomeFantasia AS 'Nome Fantasia',telefone AS 'Telefone',razaoSocial AS 'Razão Social',cnpj AS 'CNPJ', email AS 'Email',responsavel AS 'Responsável', rua AS 'Rua',numero AS 'Nº', complemento AS 'Complemento',bairro AS 'Bairro', estado AS 'Estado',cidade AS 'Cidade', cep AS 'CEP',numMenorAprendiz AS 'Quantidade de Menores Aprendiz', numPraticaSequencial AS 'Quantidade de Contrato Prática Sequencial', numConcomitante AS 'Quantidade de Contrato Concomitante', numSequencial AS 'Quantidade de Contrato Sequencial', numDual AS 'Quantidade de Contrato Dual', numFaseEscolar AS 'Quantidade de Contrato Fase Escolar'  FROM Empresa 
 SELECT usuario AS 'Usuário',tipoFunc AS 'Tipo de Funcionário',senha AS 'Senha',cpf AS 'CPF' FROM Usuario 
-SELECT dataInicio AS 'Data Inicio',dataFim AS 'Data Fim',codSemestre AS 'Código do Semestre',numAlunos AS 'Número de Alunos' FROM Semestre
-SELECT raAluno AS 'RA do Aluno',nomeAluno AS 'Nome do Aluno',idade AS 'Idade',sexo AS 'Sexo', grau_instrucao AS 'Grau de Instrução',rua AS 'Rua', numero AS 'Número',complemento AS 'Complemento', bairro AS 'Bairro', estado AS 'Estado',cidade AS 'Cidade', cep AS 'CEP',telefone1 AS 'Telefone (Residência) do Aluno',identidade AS 'Identidade do Aluno',cpf AS 'CPF', email AS 'E-mail',carteira_de_trabalho AS 'Carteira de Trabalho', nomePai AS 'Nome do Pai',telefonePai AS 'Telefone do Pai', nomeMae AS 'Nome da Mãe', nomeCurso AS 'Nome do Curso',codTurma AS 'Código da Turma', telefoneAluno2 AS 'Telefone (Celular) do Aluno',Empresa_cnpj AS 'CNPJ da Empresa', Semestre_codSemestre AS 'Código do Semestre' FROM Aluno 
+SELECT dataInicio AS 'Data Inicio',dataFim AS 'Data Fim',codSemestre AS 'Código do Semestre' FROM Semestre 
+SELECT raAluno AS 'RA do Aluno',nomeAluno AS 'Nome do Aluno',idade AS 'Idade',sexo AS 'Sexo', grau_instrucao AS 'Grau de Instrução',rua AS 'Rua', numero AS 'Número',complemento AS 'Complemento', bairro AS 'Bairro', estado AS 'Estado',cidade AS 'Cidade', cep AS 'CEP',telefone1 AS 'Telefone (Residência) do Aluno',identidade AS 'Identidade do Aluno',cpf AS 'CPF', email AS 'E-mail',carteira_de_trabalho AS 'Carteira de Trabalho', nomePai AS 'Nome do Pai',telefonePai AS 'Telefone do Pai', nomeMae AS 'Nome da Mãe', nomeCurso AS 'Nome do Curso',codTurma AS 'Código da Turma', telefoneAluno2 AS 'Telefone (Celular) do Aluno',Empresa_cnpj AS 'CNPJ da Empresa', Semestre_codSemestre AS 'Código do Semestre', tipoContrato AS 'Contrato' FROM Aluno 
 
 --GO
 --CREATE VIEW vwAlunosEmpregados AS

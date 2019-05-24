@@ -42,6 +42,7 @@ namespace AppProjetoControl
         public string Empresa_cnpj { get; set; }
         public string Semestre_codSemestre { get; set; }
         public int Idade { get; set; }
+        public string TipoContrato { get; set; }
 
 
         //Criando o objeto da classe de conexão como banco de dados
@@ -54,7 +55,7 @@ namespace AppProjetoControl
                 //Conectando o banco 
                 bd.Conectar();
                 //Executando o INSERT
-                bd.ExecutarComandosSql(String.Format("INSERT INTO Aluno VALUES ('{0}','{1}','{2}',{3},'{4}','{5}','{6}',{7},'{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}')", RaAluno, NomeAluno,DataNas,Idade,Sexo,Grau_instrucao,Rua,Numero,Complemento,Bairro,Estado,Cidade,Cep,Email,Carteira_de_trabalho,NomePai,TelefonePai,NomeMae,TelefoneMae,NomeCurso,CodTurma,StatusAluno,TelefoneAluno2,Empresa_cnpj,Semestre_codSemestre));
+                bd.ExecutarComandosSql(String.Format("INSERT INTO Aluno VALUES ('{0}','{1}','{2}',{3},'{4}','{5}','{6}',{7},'{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}')", RaAluno, NomeAluno,DataNas,Idade,Sexo,Grau_instrucao,Rua,Numero,Complemento,Bairro,Estado,Cidade,Cep,Email,Carteira_de_trabalho,NomePai,TelefonePai,NomeMae,TelefoneMae,NomeCurso,CodTurma,StatusAluno,TelefoneAluno2,TipoContrato,Empresa_cnpj,Semestre_codSemestre));
 
                 //Desconectando o banco
                 bd.Desconectar();
@@ -77,8 +78,8 @@ namespace AppProjetoControl
                 //Conectando o banco 
                 bd.Conectar();
                 //Executando o UPDATE
-                bd.ExecutarComandosSql(String.Format("UPDATE Aluno SET nomeAluno = '{0}', dataNas = '{1}', idade = '{2}', sexo = '{3}', grau_instrucao = '{4}',rua = '{5}',numero = {6},complemento = '{7}', bairro = '{8}', estado = '{9}', cidade = '{10}', cep = '{11}', telefone1 = '{12}', identidade = '{13}', email = '{14}',carteira_de_trabalho = '{15}', nomePai = '{16}',telefonePai = '{17}', nomeMae= '{18}',telefoneMae='{19}',nomeCurso = '{20}', codTurma='{21}', statusAluno = '{22}', telefoneAluno2 = '{23}',Empresa_cnpj = '{24}',Semestre_codSemestre='{25}'  WHERE raAluno = '{26}'", 
-                    NomeAluno, DataNas, Idade, Sexo, Grau_instrucao, Rua, Numero, Complemento, Bairro, Estado, Cidade, Cep,Telefone1,Identidade,Email, Carteira_de_trabalho, NomePai, TelefonePai, NomeMae, TelefoneMae, NomeCurso, CodTurma, StatusAluno, TelefoneAluno2, Empresa_cnpj, Semestre_codSemestre,raAlunoEditar));
+                bd.ExecutarComandosSql(String.Format("UPDATE Aluno SET nomeAluno = '{0}', dataNas = '{1}', idade = '{2}', sexo = '{3}', grau_instrucao = '{4}',rua = '{5}',numero = {6},complemento = '{7}', bairro = '{8}', estado = '{9}', cidade = '{10}', cep = '{11}', telefone1 = '{12}', identidade = '{13}', email = '{14}',carteira_de_trabalho = '{15}', nomePai = '{16}',telefonePai = '{17}', nomeMae= '{18}',telefoneMae='{19}',nomeCurso = '{20}', codTurma='{21}', statusAluno = '{22}', telefoneAluno2 = '{23}',Empresa_cnpj = '{24}',Semestre_codSemestre='{25}',tipoContrato = '{26}'  WHERE raAluno = '{27}'", 
+                    NomeAluno, DataNas, Idade, Sexo, Grau_instrucao, Rua, Numero, Complemento, Bairro, Estado, Cidade, Cep,Telefone1,Identidade,Email, Carteira_de_trabalho, NomePai, TelefonePai, NomeMae, TelefoneMae, NomeCurso, CodTurma, StatusAluno, TelefoneAluno2, Empresa_cnpj, Semestre_codSemestre,TipoContrato,raAlunoEditar));
                 //Desconectando o banco
                 bd.Desconectar();
                 //Se o UPDATE der certo retorna true
@@ -208,7 +209,7 @@ namespace AppProjetoControl
 
             bd.Conectar();
 
-            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Aluno WHERE raAluno LIKE '%{0}%'", busca));
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Aluno  WHERE raAluno LIKE '%{0}%'", busca));
             //Desconectando com o banco
             bd.Desconectar();
             //Retornando o objeto com o SELECT

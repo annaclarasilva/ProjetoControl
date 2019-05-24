@@ -41,7 +41,7 @@ namespace AppProjetoControl
                 idClicado = (dgvEditar.Rows[e.RowIndex].Cells["codSemestre"].Value.ToString());
             }
 
-            txtNumAlunos.Text = dgvEditar.Rows[e.RowIndex].Cells["numAlunos"].Value.ToString();
+           
             mskDataFim.Text = dgvEditar.Rows[e.RowIndex].Cells["dataFim"].Value.ToString();
             mskDataInicio.Text = dgvEditar.Rows[e.RowIndex].Cells["dataInicio"].Value.ToString();
 
@@ -49,11 +49,11 @@ namespace AppProjetoControl
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if ((txtNumAlunos.Text != "") && (mskDataFim.Text != "") && (mskDataInicio.Text != "") )
+            if ((mskDataFim.Text != "") && (mskDataInicio.Text != "") )
             {
                 semestre.DataFim = Convert.ToDateTime(mskDataFim.Text).ToString("yyyy/MM/dd");
                 semestre.DataInicio = Convert.ToDateTime(mskDataInicio.Text).ToString("yyyy/MM/dd");
-                semestre.NumAlunos = int.Parse(txtNumAlunos.Text);
+              
 
                 if (semestre.Editar(idClicado) == true)
                 {

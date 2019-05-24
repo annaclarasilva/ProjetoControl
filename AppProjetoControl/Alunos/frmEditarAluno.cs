@@ -33,7 +33,7 @@ namespace AppProjetoControl.Alunos
             string telefoneAlunoSemMascara = mskTelefoneAluno.Text.Replace("/", "").Replace(".", "").Replace("-", "");
             string cpfSemMascara = mskCpf.Text.Replace(".", "").Replace("-", "");
 
-            if (txtBusca.Text != "")
+            if ((txtBusca.Text != "") && (txtCnpjEmpresa.Text !="") && (txtCodSemestre.Text != "") && (cboContrato.Text !=""))
             {
                 aluno.NomeAluno = txtNome.Text;
                 aluno.Sexo = cboSexo.Text;
@@ -61,6 +61,7 @@ namespace AppProjetoControl.Alunos
                 aluno.TelefoneAluno2 = mskTelefoneAluno.Text;
                 aluno.Empresa_cnpj = txtCnpjEmpresa.Text;
                 aluno.Semestre_codSemestre = txtCodSemestre.Text;
+                aluno.TipoContrato = cboContrato.Text;
 
                 if (aluno.Editar(idClicado) == true)
                 {

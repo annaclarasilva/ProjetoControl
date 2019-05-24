@@ -20,7 +20,7 @@ namespace AppProjetoControl
         ClassSemestre semestre = new ClassSemestre();
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (mskDataInicio.Text != "" && mskDataFim.Text != "" && txtNumAlunos.Text != "")
+            if (mskDataInicio.Text != "" && mskDataFim.Text != "" )
             {
                 semestre.DataFim = Convert.ToDateTime(mskDataFim.Text).ToString("yyyy/MM/dd");
                 semestre.DataInicio = Convert.ToDateTime(mskDataInicio.Text).ToString("yyyy/MM/dd");
@@ -28,7 +28,7 @@ namespace AppProjetoControl
                 string codigo = (dt.Rows.Count > 0) ? dt.Rows[dt.Rows.Count - 1]["codSemestre"].ToString().Replace("SEM", "") : "0";
                 codigo = "SEM" + (int.Parse(codigo) + 1).ToString().PadLeft(3, '0');
                 semestre.CodSemestre = codigo;
-                semestre.NumAlunos = int.Parse(txtNumAlunos.Text);
+               
                 if (semestre.InserirSemestre() == true)
                 {
                     MessageBox.Show("Registro concluido com sucesso.");
