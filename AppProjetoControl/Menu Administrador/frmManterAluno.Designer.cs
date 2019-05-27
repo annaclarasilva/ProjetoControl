@@ -119,7 +119,7 @@
             this.btnCadastrarEmpresa.Name = "btnCadastrarEmpresa";
             this.btnCadastrarEmpresa.Size = new System.Drawing.Size(183, 54);
             this.btnCadastrarEmpresa.TabIndex = 263;
-            this.btnCadastrarEmpresa.Text = "Editar Aluno";
+            this.btnCadastrarEmpresa.Text = "Atualizar Aluno";
             this.btnCadastrarEmpresa.UseVisualStyleBackColor = false;
             this.btnCadastrarEmpresa.Click += new System.EventHandler(this.btnCadastrarEmpresa_Click);
             // 

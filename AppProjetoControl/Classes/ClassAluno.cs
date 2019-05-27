@@ -209,7 +209,7 @@ namespace AppProjetoControl
 
             bd.Conectar();
 
-            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Aluno  WHERE raAluno LIKE '%{0}%' OR tipoContrato LIKE '%{0}%'" , busca));
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Aluno  WHERE raAluno LIKE '%{0}%'" , busca));
             //Desconectando com o banco
             bd.Desconectar();
             //Retornando o objeto com o SELECT
@@ -224,7 +224,21 @@ namespace AppProjetoControl
             return dt;
         }
 
-        
+
+        //Método para retornar um aluno por busca
+        public DataTable RetAlunoBuscaAvancada(string busca)
+        {
+            //Conectando com o banco ,
+
+            bd.Conectar();
+
+            DataTable dt = bd.RetDataTable(String.Format("SELECT A.nomeAluno, A.raAluno, A.cpf,A.codTurma,E.cnpj,E.nomeFantasia,A.cidade,A.idade, A.sexo,A.statusAluno FROM Aluno AS A LEFT JOIN Empresa AS E ON(A.Empresa_cnpj = E.cnpj) WHERE A.Semestre_codSemestre LIKE '%{0}%' OR A.statusAluno LIKE '%{0}%' OR A.sexo LIKE '{0}' OR A.cidade LIKE '%{0}%' OR A.idade LIKE '%{0}%' ", busca));
+            //Desconectando com o banco
+            bd.Desconectar();
+            //Retornando o objeto com o SELECT
+            return dt;
+        }
+
     }
 }
 

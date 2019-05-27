@@ -24,15 +24,14 @@ namespace AppProjetoControl.Menu_Administrador
             string telefoneSemMascara = mskTelefone.Text.Replace("-", "").Replace("(", "").Replace(")", "").Replace(" ", "");
             string cnpjSemMascara = mskCnpj.Text.Replace("/", "").Replace(".", "").Replace("-", "");
             string cepSemMascara = mskCep.Text.Replace("-", "");
-
-            if (txtBusca.Text != "")
+            if (ValidarContratos()== true)
             {
                 if ((txtNomeFantasia.Text != "") && (mskTelefone.Text != "") && (txtRazaoSocial.Text != "") && (mskCnpj.Text != "") && (txtEmail.Text != "") && (txtResponsavel.Text != "") && (txtRua.Text != "") && (txtNumero.Text != "") && (txtComplemento.Text != "") && (txtBairro.Text != "") && (txtEstado.Text != "") && (txtCidade.Text != "") && (mskCep.Text != ""))
                 {
                     empresa.NomeFantasia = txtNomeFantasia.Text;
                     empresa.Telefone = telefoneSemMascara;
                     empresa.RazaoSocial = txtRazaoSocial.Text;
-                   
+
                     empresa.Email = txtNomeFantasia.Text;
                     empresa.Responsavel = telefoneSemMascara;
                     empresa.Rua = txtRua.Text;
@@ -64,10 +63,9 @@ namespace AppProjetoControl.Menu_Administrador
                     MessageBox.Show("Preencha todos os dados.");
                 }
             }
-            else
-            {
-                MessageBox.Show("Preencha o campo de busca .");
-            }
+         
+               
+            
         }
 
         private void dgvEditarEmpresa_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -113,6 +111,28 @@ namespace AppProjetoControl.Menu_Administrador
         {
             txtBusca.Text = "";
             txtBusca.ForeColor = Color.Black;
+        }
+
+        public bool ValidarContratos()
+        {
+            int quantContratos = int.Parse(txtQuantContratos.Text != "" ? txtQuantContratos.Text : "0");
+            int cont1 = int.Parse(txtFaseEscolar.Text != "" ? txtFaseEscolar.Text : "0");
+            int cont2 = int.Parse(txtPraticaSequencial.Text != "" ? txtPraticaSequencial.Text : "0");
+            int cont3 = int.Parse(txtConcomitante.Text != "" ? txtConcomitante.Text : "0");
+            int cont4 = int.Parse(txtSequencial.Text != "" ? txtSequencial.Text : "0");
+            int cont5 = int.Parse(txtDual.Text != "" ? txtDual.Text : "0");
+
+            if (cont1 + cont2 + cont3 + cont4 + cont5 == quantContratos)
+            {
+
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Os número de contratos não são compatíveis com o número de opções.");
+                return false;
+            }
+
         }
     }
 }

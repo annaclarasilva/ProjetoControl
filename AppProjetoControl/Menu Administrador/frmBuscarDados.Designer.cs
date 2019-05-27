@@ -54,7 +54,7 @@
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(909, 28);
             this.txtBusca.TabIndex = 58;
-            this.txtBusca.Text = "Busque o aluno pelo RA";
+            this.txtBusca.Text = "Busque o aluno pelo Cód. Semestre, Status do Aluno, Sexo,Cidade ou Idade";
             this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
             this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);
             // 

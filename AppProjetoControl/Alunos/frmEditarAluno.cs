@@ -59,7 +59,7 @@ namespace AppProjetoControl.Alunos
                     aluno.TelefoneMae = telefoneMaeSemMascara;
                     aluno.NomeCurso = txtNomeCurso.Text;
                     aluno.CodTurma = txtCodTurma.Text;
-                    aluno.StatusAluno = txtStatusAluno.Text;
+                    aluno.StatusAluno = cboStatusAluno.Text;
                     aluno.TelefoneAluno2 = mskTelefoneAluno.Text;
                     aluno.Empresa_cnpj = cnpjSemMascara;
                     aluno.Semestre_codSemestre = txtCodSemestre.Text;
@@ -67,18 +67,18 @@ namespace AppProjetoControl.Alunos
 
                     if (aluno.Editar(idClicado) == true)
                     {
-                        MessageBox.Show("Edição concluida com sucesso.");
+                        MessageBox.Show("Aluno atualizado com sucesso!");
                         dgvEditarAlunos.DataSource = aluno.RetAluno();
                     }
                     else
                     {
-                        MessageBox.Show("Edição não concluída tente novamente.");
+                        MessageBox.Show("Atualização não concluída tente novamente.");
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Edição não concluída tente novamente.");
+                MessageBox.Show("Atualização não concluída. Tente novamente.");
             }
 
 
@@ -124,7 +124,7 @@ namespace AppProjetoControl.Alunos
             mskTelefonePai.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["telefonePai"].Value.ToString();
             txtNomeCurso.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["nomeCurso"].Value.ToString();
             txtCodTurma.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["codTurma"].Value.ToString();
-            txtStatusAluno.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["statusAluno"].Value.ToString();
+            cboStatusAluno.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["statusAluno"].Value.ToString();
             mskTelefoneAluno.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["telefoneAluno2"].Value.ToString();
             mskCnpj.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["Empresa_cnpj"].Value.ToString();
             cboSexo.Text = dgvEditarAlunos.Rows[e.RowIndex].Cells["sexo"].Value.ToString();
@@ -162,28 +162,30 @@ namespace AppProjetoControl.Alunos
             semestre.CodDigitado = txtCodSemestre.Text;
             if (semestre.ValidarCodSemestre() == false)
             {
-                txtCodSemestre.ForeColor = Color.Black;
+                txtCodSemestre.ForeColor = Color.Tomato;
             }
             else
             {
-                txtCodSemestre.ForeColor = Color.Tomato;
+                txtCodSemestre.ForeColor = Color.Black;
 
             }
         }
 
         ClassEmpresa empresa = new ClassEmpresa();
-        private void txtCnpjEmpresa_Leave(object sender, EventArgs e)
+
+
+        private void mskCnpj_Leave(object sender, EventArgs e)
         {
             string cnpjSemMascara = mskCnpj.Text.Replace("/", "").Replace(".", "").Replace("-", "");
             empresa.CnpjDigitado = cnpjSemMascara;
             if (empresa.ValidarCnpj() == false)
             {
-                mskCnpj.ForeColor = Color.Black;
+                mskCnpj.ForeColor = Color.Tomato;
 
             }
             else
             {
-                mskCnpj.ForeColor = Color.Tomato;
+                mskCnpj.ForeColor = Color.Black;
 
             }
         }

@@ -75,7 +75,6 @@
             this.lblNomeCurso = new System.Windows.Forms.Label();
             this.txtCodTurma = new System.Windows.Forms.TextBox();
             this.lblCodTurma = new System.Windows.Forms.Label();
-            this.txtStatusAluno = new System.Windows.Forms.TextBox();
             this.lblStatusAluno = new System.Windows.Forms.Label();
             this.mskTelefoneAluno = new System.Windows.Forms.MaskedTextBox();
             this.lblTelefoneAluno = new System.Windows.Forms.Label();
@@ -87,6 +86,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cboContrato = new System.Windows.Forms.ComboBox();
             this.mskCnpj = new System.Windows.Forms.MaskedTextBox();
+            this.cboStatusAluno = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditarAlunos)).BeginInit();
             this.SuspendLayout();
@@ -106,11 +106,11 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTitulo.Location = new System.Drawing.Point(176, 20);
+            this.lblTitulo.Location = new System.Drawing.Point(81, 20);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(360, 36);
+            this.lblTitulo.Size = new System.Drawing.Size(520, 36);
             this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "FORMULÁRIO DE EDIÇÃO";
+            this.lblTitulo.Text = "Formulário de Atualização do Aluno";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnEditar
@@ -548,15 +548,6 @@
             this.lblCodTurma.TabIndex = 103;
             this.lblCodTurma.Text = "Código da Turma:";
             // 
-            // txtStatusAluno
-            // 
-            this.txtStatusAluno.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtStatusAluno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatusAluno.Location = new System.Drawing.Point(151, 541);
-            this.txtStatusAluno.Name = "txtStatusAluno";
-            this.txtStatusAluno.Size = new System.Drawing.Size(284, 27);
-            this.txtStatusAluno.TabIndex = 104;
-            // 
             // lblStatusAluno
             // 
             this.lblStatusAluno.AutoSize = true;
@@ -672,6 +663,19 @@
             this.mskCnpj.Size = new System.Drawing.Size(156, 27);
             this.mskCnpj.TabIndex = 116;
             this.mskCnpj.Text = "28747588000160";
+            this.mskCnpj.Leave += new System.EventHandler(this.mskCnpj_Leave);
+            // 
+            // cboStatusAluno
+            // 
+            this.cboStatusAluno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboStatusAluno.FormattingEnabled = true;
+            this.cboStatusAluno.Items.AddRange(new object[] {
+            "Matriculado",
+            "Contratado"});
+            this.cboStatusAluno.Location = new System.Drawing.Point(151, 540);
+            this.cboStatusAluno.Name = "cboStatusAluno";
+            this.cboStatusAluno.Size = new System.Drawing.Size(245, 29);
+            this.cboStatusAluno.TabIndex = 117;
             // 
             // frmEditarAluno
             // 
@@ -679,6 +683,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(706, 920);
+            this.Controls.Add(this.cboStatusAluno);
             this.Controls.Add(this.mskCnpj);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboContrato);
@@ -689,7 +694,6 @@
             this.Controls.Add(this.lblCnpj);
             this.Controls.Add(this.mskTelefoneAluno);
             this.Controls.Add(this.lblTelefoneAluno);
-            this.Controls.Add(this.txtStatusAluno);
             this.Controls.Add(this.lblStatusAluno);
             this.Controls.Add(this.txtCodTurma);
             this.Controls.Add(this.lblCodTurma);
@@ -799,7 +803,6 @@
         private System.Windows.Forms.Label lblNomeCurso;
         private System.Windows.Forms.TextBox txtCodTurma;
         private System.Windows.Forms.Label lblCodTurma;
-        private System.Windows.Forms.TextBox txtStatusAluno;
         private System.Windows.Forms.Label lblStatusAluno;
         private System.Windows.Forms.MaskedTextBox mskTelefoneAluno;
         private System.Windows.Forms.Label lblTelefoneAluno;
@@ -811,5 +814,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboContrato;
         private System.Windows.Forms.MaskedTextBox mskCnpj;
+        private System.Windows.Forms.ComboBox cboStatusAluno;
     }
 }
