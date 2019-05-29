@@ -26,12 +26,11 @@ namespace AppProjetoControl.Menu_Administrador
             string cepSemMascara = mskCep.Text.Replace("-", "");
             if (ValidarContratos()== true)
             {
-                if ((txtNomeFantasia.Text != "") && (mskTelefone.Text != "") && (txtRazaoSocial.Text != "") && (mskCnpj.Text != "") && (txtEmail.Text != "") && (txtResponsavel.Text != "") && (txtRua.Text != "") && (txtNumero.Text != "") && (txtComplemento.Text != "") && (txtBairro.Text != "") && (txtEstado.Text != "") && (txtCidade.Text != "") && (mskCep.Text != ""))
+                if ((txtNomeFantasia.Text != "") && (mskTelefone.Text != "") && (txtRazaoSocial.Text != "") && (mskCnpj.Text != "") && (txtEmail.Text != "") && (txtResponsavel.Text != "") && (txtRua.Text != "") && (txtNumero.Text != "") && (txtComplemento.Text != "") && (txtBairro.Text != "") && (txtEstado.Text != "") && (txtCidade.Text != "") && (mskCep.Text != "") && (txtFpass.Text != ""))
                 {
                     empresa.NomeFantasia = txtNomeFantasia.Text;
                     empresa.Telefone = telefoneSemMascara;
                     empresa.RazaoSocial = txtRazaoSocial.Text;
-
                     empresa.Email = txtNomeFantasia.Text;
                     empresa.Responsavel = telefoneSemMascara;
                     empresa.Rua = txtRua.Text;
@@ -47,6 +46,7 @@ namespace AppProjetoControl.Menu_Administrador
                     empresa.NumConcomitante = int.Parse(txtConcomitante.Text != "" ? txtConcomitante.Text : "0");
                     empresa.NumSequencial = int.Parse(txtSequencial.Text != "" ? txtSequencial.Text : "0");
                     empresa.NumDual = int.Parse(txtDual.Text != "" ? txtDual.Text : "0");
+                    empresa.Fpass = int.Parse(txtFpass.Text);
 
                     if (empresa.Editar(idClicado) == true)
                     {
@@ -95,6 +95,7 @@ namespace AppProjetoControl.Menu_Administrador
             txtConcomitante.Text = dgvEditarEmpresa.Rows[e.RowIndex].Cells["numConcomitante"].Value.ToString();
             txtSequencial.Text = dgvEditarEmpresa.Rows[e.RowIndex].Cells["numSequencial"].Value.ToString();
             txtDual.Text = dgvEditarEmpresa.Rows[e.RowIndex].Cells["numDual"].Value.ToString();
+            txtFpass.Text = dgvEditarEmpresa.Rows[e.RowIndex].Cells["fpass"].Value.ToString();
         }
 
         private void txtBusca_TextChanged(object sender, EventArgs e)

@@ -31,6 +31,7 @@ namespace AppProjetoControl
         public int NumConcomitante { get; set; }
         public int NumSequencial { get; set; }
         public int NumDual { get; set; }
+        public int Fpass { get; set; }
 
         //Criando o objeto da classe de conexão como banco de dados
         ClassConexaoBd bd = new ClassConexaoBd();
@@ -43,7 +44,7 @@ namespace AppProjetoControl
                 //Conectando o banco 
                 bd.Conectar();
                 //Executando o INSERT
-                bd.ExecutarComandosSql(String.Format("INSERT INTO Empresa (nomeFantasia,telefone,razaoSocial,cnpj,email,responsavel,rua,numero,complemento,bairro,estado,cidade,cep,numMenorAprendiz,numFaseEscolar,numPraticaSequencial,numConcomitante,numSequencial,numDual) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}',{7},'{8}','{9}','{10}','{11}','{12}',{13},{14},{15},{16},{17},{18})", NomeFantasia, Telefone, RazaoSocial, Cnpj, Email, Responsavel, Rua, Numero, Complemento, Bairro, Estado, Cidade, Cep,NumMenorAprendiz,NumFaseEscolar,NumPraticaSequencial,NumConcomitante,NumSequencial,NumDual));
+                bd.ExecutarComandosSql(String.Format("INSERT INTO Empresa (nomeFantasia,telefone,razaoSocial,cnpj,email,responsavel,rua,numero,complemento,bairro,estado,cidade,cep,numMenorAprendiz,numFaseEscolar,numPraticaSequencial,numConcomitante,numSequencial,numDual,fpass) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}',{7},'{8}','{9}','{10}','{11}','{12}',{13},{14},{15},{16},{17},{18},{19})", NomeFantasia, Telefone, RazaoSocial, Cnpj, Email, Responsavel, Rua, Numero, Complemento, Bairro, Estado, Cidade, Cep,NumMenorAprendiz,NumFaseEscolar,NumPraticaSequencial,NumConcomitante,NumSequencial,NumDual,Fpass));
                 //Desconectando o banco
                 bd.Desconectar();
                 //Se o INSERT der certo retorna true
@@ -65,7 +66,7 @@ namespace AppProjetoControl
                 //Conectando o banco 
                 bd.Conectar();
                 //Executando o UPDATE
-                bd.ExecutarComandosSql(String.Format("UPDATE Empresa SET nomeFantasia = '{0}', telefone = '{1}',email = '{2}',responsavel = '{3}', rua = '{4}',numero = '{5}',complemento = '{6}',bairro = '{7}',estado = '{8}',cidade = '{9}',cep='{10}',numMenorAprendiz = {11},numFaseEscolar = {12}, numPraticaSequencial = {13}, numConcomitante = {14}, numSequencial = {15}, numDual = {16} WHERE cnpj= '{17}'", NomeFantasia, Telefone,Email,Responsavel,Rua,Numero,Complemento,Bairro,Estado,Cidade,Cep,NumMenorAprendiz,NumFaseEscolar,NumPraticaSequencial,NumConcomitante,NumSequencial,NumDual,cnpjEditar));
+                bd.ExecutarComandosSql(String.Format("UPDATE Empresa SET nomeFantasia = '{0}', telefone = '{1}',email = '{2}',responsavel = '{3}', rua = '{4}',numero = '{5}',complemento = '{6}',bairro = '{7}',estado = '{8}',cidade = '{9}',cep='{10}',numMenorAprendiz = {11},numFaseEscolar = {12}, numPraticaSequencial = {13}, numConcomitante = {14}, numSequencial = {15}, numDual = {16}, fpass = {17} WHERE cnpj= '{18}'", NomeFantasia, Telefone,Email,Responsavel,Rua,Numero,Complemento,Bairro,Estado,Cidade,Cep,NumMenorAprendiz,NumFaseEscolar,NumPraticaSequencial,NumConcomitante,NumSequencial,NumDual,Fpass,cnpjEditar));
                 //Desconectando o banco
                 bd.Desconectar();
                 //Se o UPDATE der certo retorna true

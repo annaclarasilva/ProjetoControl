@@ -69,6 +69,8 @@
             this.lblNumero = new System.Windows.Forms.Label();
             this.txtQuantContratos = new System.Windows.Forms.TextBox();
             this.lblContrato = new System.Windows.Forms.Label();
+            this.txtFpass = new System.Windows.Forms.TextBox();
+            this.lblFpass = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -225,7 +227,7 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.Black;
-            this.btnSalvar.Location = new System.Drawing.Point(556, 621);
+            this.btnSalvar.Location = new System.Drawing.Point(569, 708);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(132, 32);
             this.btnSalvar.TabIndex = 8;
@@ -442,7 +444,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 609);
+            this.label6.Location = new System.Drawing.Point(17, 609);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 23);
             this.label6.TabIndex = 104;
@@ -487,12 +489,33 @@
             this.lblContrato.TabIndex = 108;
             this.lblContrato.Text = "Quantidade de Contratos:";
             // 
+            // txtFpass
+            // 
+            this.txtFpass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFpass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFpass.Location = new System.Drawing.Point(89, 643);
+            this.txtFpass.Name = "txtFpass";
+            this.txtFpass.Size = new System.Drawing.Size(137, 27);
+            this.txtFpass.TabIndex = 109;
+            // 
+            // lblFpass
+            // 
+            this.lblFpass.AutoSize = true;
+            this.lblFpass.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFpass.Location = new System.Drawing.Point(19, 644);
+            this.lblFpass.Name = "lblFpass";
+            this.lblFpass.Size = new System.Drawing.Size(69, 23);
+            this.lblFpass.TabIndex = 110;
+            this.lblFpass.Text = "FPASS:";
+            // 
             // frmCadastrarEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(713, 665);
+            this.ClientSize = new System.Drawing.Size(713, 752);
+            this.Controls.Add(this.txtFpass);
+            this.Controls.Add(this.lblFpass);
             this.Controls.Add(this.txtQuantContratos);
             this.Controls.Add(this.lblContrato);
             this.Controls.Add(this.txtNumero);
@@ -589,5 +612,7 @@
         private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.TextBox txtQuantContratos;
         private System.Windows.Forms.Label lblContrato;
+        private System.Windows.Forms.TextBox txtFpass;
+        private System.Windows.Forms.Label lblFpass;
     }
 }

@@ -1,7 +1,9 @@
 CREATE DATABASE bdProjetoControl
 GO
+
 USE bdProjetoControl
 GO
+
 CREATE TABLE Empresa(
 	nomeFantasia	VARCHAR (100) NOT NULL,
 	telefone		VARCHAR (13) NOT NULL,
@@ -22,77 +24,77 @@ CREATE TABLE Empresa(
 	numConcomitante INT NULL,
 	numSequencial INT NULL,
 	numDual INT NULL,
-
+	fpass INT NULL, 
 );
 INSERT INTO Empresa (nomeFantasia,telefone,razaoSocial,cnpj,email,responsavel,rua,numero,complemento,bairro,estado,cidade,cep,numMenorAprendiz,numFaseEscolar,numPraticaSequencial,numConcomitante,numSequencial,numDual) VALUES ('Empresa','3195958648','Empresa','28747588000160','empresa@gmail.com','Dono da Empresa','Rua Dom Manuel O Venturoso',129,'aaa','Vila Paranaguá','SP','São Paulo','03806100',50,0,25,25,0,0)
-select * from Empresa
-CREATE TABLE Semestre (
+SELECT * FROM Empresa
+
+CREATE TABLE Semestre(
 	dataInicio		DATE NOT NULL,
 	dataFim			DATE NOT NULL,
 	codSemestre		VARCHAR (20) PRIMARY KEY NOT NULL,
 );
 
 CREATE TABLE Aluno(
-	raAluno			VARCHAR (100)  PRIMARY KEY ,
-	nomeAluno		VARCHAR (100) ,
-	dataNas			VARCHAR (100) ,
-	idade			VARCHAR (100) ,
-	sexo			VARCHAR (100) ,
-	grau_instrucao	VARCHAR (100) ,
-	rua				VARCHAR (100) ,
-	numero			VARCHAR (100) ,
-	complemento		VARCHAR (100) ,
-	bairro			VARCHAR (100) ,
-	estado			VARCHAR (100) ,
-	cidade			VARCHAR (100) ,
-	cep				VARCHAR (100) ,
-	telefone1		VARCHAR (100) ,
-	identidade		VARCHAR (13) ,
-	cpf				VARCHAR(12) ,
-	email			VARCHAR (100) ,
-	carteira_de_trabalho VARCHAR (100) ,
-	nomePai			VARCHAR (100) ,
-	telefonePai		VARCHAR (100) ,
-	nomeMae			VARCHAR (100) ,
-	telefoneMae		VARCHAR (100) ,
-	nomeCurso		VARCHAR (30) ,
-	codTurma		VARCHAR (100) ,
-	statusAluno		VARCHAR (100) ,
-	telefoneAluno2	VARCHAR (100) ,
-	Empresa_cnpj	VARCHAR (100) ,
+	raAluno			VARCHAR (100)  PRIMARY KEY,
+	nomeAluno		VARCHAR (100),
+	dataNas			VARCHAR (100),
+	idade			VARCHAR (100),
+	sexo			VARCHAR (100),
+	grau_instrucao	VARCHAR (100),
+	rua				VARCHAR (100),
+	numero			VARCHAR (100),
+	complemento		VARCHAR (100),
+	bairro			VARCHAR (100),
+	estado			VARCHAR (100),
+	cidade			VARCHAR (100),
+	cep				VARCHAR (100),
+	telefone1		VARCHAR (100),
+	identidade		VARCHAR (13),
+	cpf				VARCHAR(12),
+	email			VARCHAR (100),
+	carteira_de_trabalho VARCHAR (100),
+	nomePai			VARCHAR (100),
+	telefonePai		VARCHAR (100),
+	nomeMae			VARCHAR (100),
+	telefoneMae		VARCHAR (100),
+	nomeCurso		VARCHAR (30),
+	codTurma		VARCHAR (100),
+	statusAluno		VARCHAR (100),
+	telefoneAluno2	VARCHAR (100),
+	Empresa_cnpj	VARCHAR (100),
 	tipoContrato	VARCHAR (100),
 	FOREIGN KEY (Empresa_cnpj) REFERENCES Empresa (cnpj),
 	Semestre_codSemestre VARCHAR (20) ,
 	FOREIGN KEY (Semestre_codSemestre) REFERENCES Semestre (codSemestre),
 );
+SELECT * FROM Aluno
 
-CREATE TABLE Funcionario (
+CREATE TABLE Funcionario(
 	usuario VARCHAR (15),
 	tipoFunc INT,
 	senha VARCHAR (8),
 	cpf VARCHAR (13) PRIMARY KEY NOT NULL,
 );
 
-CREATE TABLE Usuario (
+CREATE TABLE Usuario(
 	usuario VARCHAR (15),
 	tipoFunc INT,
 	senha VARCHAR (8),
 	cpf VARCHAR (13) PRIMARY KEY NOT NULL,
 );
-
-select * from Aluno
-
 
 INSERT INTO Usuario VALUES ('michel',1,'michel12','250111760-37'),
 ('rafael',2,'rafa123','858919320-91')
-SELECT * FROM Usuario
-select * from Empresa
-select * from Semestre
 
-select * from Aluno
+SELECT * FROM Usuario
+SELECT * FROM Empresa
+SELECT * FROM Semestre
+SELECT * FROM Aluno
+
 SELECT * FROM Aluno WHERE raAluno LIKE '%1%'
 
-SELECT nomeFantasia AS 'Nome Fantasia',telefone AS 'Telefone',razaoSocial AS 'Razão Social',cnpj AS 'CNPJ', email AS 'Email',responsavel AS 'Responsável', rua AS 'Rua',numero AS 'Nº', complemento AS 'Complemento',bairro AS 'Bairro', estado AS 'Estado',cidade AS 'Cidade', cep AS 'CEP',numMenorAprendiz AS 'Quantidade de Menores Aprendiz', numPraticaSequencial AS 'Quantidade de Contrato Prática Sequencial', numConcomitante AS 'Quantidade de Contrato Concomitante', numSequencial AS 'Quantidade de Contrato Sequencial', numDual AS 'Quantidade de Contrato Dual', numFaseEscolar AS 'Quantidade de Contrato Fase Escolar'  FROM Empresa 
+SELECT nomeFantasia AS 'Nome Fantasia',telefone AS 'Telefone',razaoSocial AS 'Razão Social',cnpj AS 'CNPJ', email AS 'Email',responsavel AS 'Responsável', rua AS 'Rua',numero AS 'Nº', complemento AS 'Complemento',bairro AS 'Bairro', estado AS 'Estado',cidade AS 'Cidade', cep AS 'CEP',numMenorAprendiz AS 'Quantidade de Menores Aprendiz', numPraticaSequencial AS 'Quantidade de Contrato Prática Sequencial', numConcomitante AS 'Quantidade de Contrato Concomitante', numSequencial AS 'Quantidade de Contrato Sequencial', numDual AS 'Quantidade de Contrato Dual', numFaseEscolar AS 'Quantidade de Contrato Fase Escolar', fpass AS 'FPASS' FROM Empresa 
 SELECT usuario AS 'Usuário',tipoFunc AS 'Tipo de Funcionário',senha AS 'Senha',cpf AS 'CPF' FROM Usuario 
 SELECT dataInicio AS 'Data Inicio',dataFim AS 'Data Fim',codSemestre AS 'Código do Semestre' FROM Semestre 
 SELECT raAluno AS 'RA do Aluno',nomeAluno AS 'Nome do Aluno',idade AS 'Idade',sexo AS 'Sexo', grau_instrucao AS 'Grau de Instrução',rua AS 'Rua', numero AS 'Número',complemento AS 'Complemento', bairro AS 'Bairro', estado AS 'Estado',cidade AS 'Cidade', cep AS 'CEP',telefone1 AS 'Telefone (Residência) do Aluno',identidade AS 'Identidade do Aluno',cpf AS 'CPF', email AS 'E-mail',carteira_de_trabalho AS 'Carteira de Trabalho', nomePai AS 'Nome do Pai',telefonePai AS 'Telefone do Pai', nomeMae AS 'Nome da Mãe', nomeCurso AS 'Nome do Curso',codTurma AS 'Código da Turma', telefoneAluno2 AS 'Telefone (Celular) do Aluno',Empresa_cnpj AS 'CNPJ da Empresa', Semestre_codSemestre AS 'Código do Semestre', tipoContrato AS 'Contrato' FROM Aluno 
@@ -109,7 +111,5 @@ SELECT A.nomeAluno, A.raAluno, A.cpf,A.codTurma,E.cnpj,E.nomeFantasia
 FROM Aluno AS A LEFT JOIN Empresa AS E ON (A.Empresa_cnpj = E.cnpj)
  WHERE A.Semestre_codSemestre LIKE '%F%' OR A.statusAluno LIKE '%F%' OR A.sexo LIKE '%F%' OR A.cidade LIKE '%F%' OR A.idade = 18 
 
-
- SELECT * FROM Aluno
 --use master 
 --drop database bdProjetoControl 

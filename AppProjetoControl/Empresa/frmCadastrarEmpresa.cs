@@ -76,7 +76,7 @@ namespace AppProjetoControl.Menu_Administrador
             string cnpjSemMascara = mskCnpj.Text.Replace("/", "").Replace(".", "").Replace("-", "");
             string cepSemMascara = mskCep.Text.Replace("-", "");
 
-            if ((txtNomeFantasia.Text != "") && (mskTelefone.Text != "") && (txtRazaoSocial.Text != "") && (mskCnpj.Text != "") && (txtEmail.Text != "") && (txtResponsavel.Text != "") && (txtRua.Text != "") && (txtNumero.Text != "") && (txtComplemento.Text != "") && (txtBairro.Text != "") && (txtEstado.Text != "") && (txtCidade.Text != "") && (mskCep.Text != ""))
+            if ((txtNomeFantasia.Text != "") && (mskTelefone.Text != "") && (txtRazaoSocial.Text != "") && (mskCnpj.Text != "") && (txtEmail.Text != "") && (txtResponsavel.Text != "") && (txtRua.Text != "") && (txtNumero.Text != "") && (txtComplemento.Text != "") && (txtBairro.Text != "") && (txtEstado.Text != "") && (txtCidade.Text != "") && (mskCep.Text != "") && (txtFpass.Text != ""))
             {
 
                 if ((Validar() == true)&& (ValidarContratos()==true)) 
@@ -100,6 +100,7 @@ namespace AppProjetoControl.Menu_Administrador
                     empresa.NumConcomitante = int.Parse(txtConcomitante.Text != "" ? txtConcomitante.Text : "0");
                     empresa.NumSequencial = int.Parse(txtSequencial.Text != "" ? txtSequencial.Text : "0");
                     empresa.NumDual = int.Parse(txtDual.Text != "" ? txtDual.Text : "0");
+                    empresa.Fpass = int.Parse(txtFpass.Text);
                     DataTable dt = empresa.RetEmpresa();
 
                     if (empresa.InserirEmpresa() == true)

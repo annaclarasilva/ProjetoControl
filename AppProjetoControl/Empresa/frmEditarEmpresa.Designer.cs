@@ -73,6 +73,8 @@
             this.lblConcomitante = new System.Windows.Forms.Label();
             this.txtPraticaSequencial = new System.Windows.Forms.TextBox();
             this.lblPraticaSequencial = new System.Windows.Forms.Label();
+            this.txtFpass = new System.Windows.Forms.TextBox();
+            this.lblFpass = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditarEmpresa)).BeginInit();
             this.SuspendLayout();
@@ -515,12 +517,33 @@
             this.lblPraticaSequencial.TabIndex = 111;
             this.lblPraticaSequencial.Text = "Prática Sequencial:";
             // 
+            // txtFpass
+            // 
+            this.txtFpass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFpass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFpass.Location = new System.Drawing.Point(238, 411);
+            this.txtFpass.Name = "txtFpass";
+            this.txtFpass.Size = new System.Drawing.Size(137, 27);
+            this.txtFpass.TabIndex = 122;
+            // 
+            // lblFpass
+            // 
+            this.lblFpass.AutoSize = true;
+            this.lblFpass.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFpass.Location = new System.Drawing.Point(168, 412);
+            this.lblFpass.Name = "lblFpass";
+            this.lblFpass.Size = new System.Drawing.Size(69, 23);
+            this.lblFpass.TabIndex = 123;
+            this.lblFpass.Text = "FPASS:";
+            // 
             // frmEditarEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(706, 920);
+            this.Controls.Add(this.txtFpass);
+            this.Controls.Add(this.lblFpass);
             this.Controls.Add(this.txtQuantContratos);
             this.Controls.Add(this.lblContrato);
             this.Controls.Add(this.txtDual);
@@ -625,5 +648,7 @@
         private System.Windows.Forms.Label lblConcomitante;
         private System.Windows.Forms.TextBox txtPraticaSequencial;
         private System.Windows.Forms.Label lblPraticaSequencial;
+        private System.Windows.Forms.TextBox txtFpass;
+        private System.Windows.Forms.Label lblFpass;
     }
 }
